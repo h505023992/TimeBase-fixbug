@@ -1,0 +1,106 @@
+Args in experiment:
+Namespace(is_training=1, model_id='ETTm2_336_720', model='SparseTSF', data='ETTm2', root_path='./dataset/', data_path='ETTm2.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=336, label_len=48, pred_len=720, period_len=4, fc_dropout=0.05, head_dropout=0.0, patch_len=16, stride=8, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=25, individual=0, embed_type=0, enc_in=7, dec_in=7, c_out=7, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=1, distil=True, dropout=0.05, embed='learned', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=30, batch_size=256, patience=5, learning_rate=0.02, des='test', loss='mse', lradj='type3', pct_start=0.3, use_amp=False, use_gpu=True, gpu=2, use_multi_gpu=0, devices='0,1', test_flop=False)
+Use GPU: cuda:2
+>>>>>>>start training : ETTm2_336_720_SparseTSF_ETTm2_ftM_sl336_pl720_test_0_seed2023>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 33505
+val 10801
+test 10801
+	iters: 100, epoch: 1 | loss: 0.4877563
+	speed: 0.1513s/iter; left time: 574.9810s
+Epoch: 1 cost time: 17.593819618225098
+Epoch: 1, Steps: 130 | Train Loss: 0.5901612 Vali Loss: 0.2873806 Test Loss: 0.3989550
+Validation loss decreased (inf --> 0.287381).  Saving model ...
+Updating learning rate to 0.02
+	iters: 100, epoch: 2 | loss: 0.5434602
+	speed: 0.2988s/iter; left time: 1096.8015s
+Epoch: 2 cost time: 12.766909122467041
+Epoch: 2, Steps: 130 | Train Loss: 0.5313602 Vali Loss: 0.2685122 Test Loss: 0.3808065
+Validation loss decreased (0.287381 --> 0.268512).  Saving model ...
+Updating learning rate to 0.02
+	iters: 100, epoch: 3 | loss: 0.4194464
+	speed: 0.2665s/iter; left time: 943.7947s
+Epoch: 3 cost time: 10.669341325759888
+Epoch: 3, Steps: 130 | Train Loss: 0.5284404 Vali Loss: 0.2689822 Test Loss: 0.3804706
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.02
+	iters: 100, epoch: 4 | loss: 0.5299253
+	speed: 0.2921s/iter; left time: 996.4463s
+Epoch: 4 cost time: 12.598052978515625
+Epoch: 4, Steps: 130 | Train Loss: 0.5244754 Vali Loss: 0.2657392 Test Loss: 0.3758114
+Validation loss decreased (0.268512 --> 0.265739).  Saving model ...
+Updating learning rate to 0.016
+	iters: 100, epoch: 5 | loss: 0.5878236
+	speed: 0.3021s/iter; left time: 991.1860s
+Epoch: 5 cost time: 12.278108596801758
+Epoch: 5, Steps: 130 | Train Loss: 0.5242996 Vali Loss: 0.2660624 Test Loss: 0.3752060
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.012800000000000002
+	iters: 100, epoch: 6 | loss: 0.5972499
+	speed: 0.2952s/iter; left time: 930.2710s
+Epoch: 6 cost time: 12.109581470489502
+Epoch: 6, Steps: 130 | Train Loss: 0.5213916 Vali Loss: 0.2666624 Test Loss: 0.3761878
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.010240000000000003
+	iters: 100, epoch: 7 | loss: 0.4261431
+	speed: 0.2868s/iter; left time: 866.3971s
+Epoch: 7 cost time: 11.183435916900635
+Epoch: 7, Steps: 130 | Train Loss: 0.5223204 Vali Loss: 0.2657367 Test Loss: 0.3742930
+Validation loss decreased (0.265739 --> 0.265737).  Saving model ...
+Updating learning rate to 0.008192000000000001
+	iters: 100, epoch: 8 | loss: 0.4960578
+	speed: 0.2967s/iter; left time: 857.7135s
+Epoch: 8 cost time: 12.654956102371216
+Epoch: 8, Steps: 130 | Train Loss: 0.5210712 Vali Loss: 0.2650171 Test Loss: 0.3757702
+Validation loss decreased (0.265737 --> 0.265017).  Saving model ...
+Updating learning rate to 0.0065536000000000014
+	iters: 100, epoch: 9 | loss: 0.4520082
+	speed: 0.2911s/iter; left time: 803.7364s
+Epoch: 9 cost time: 12.420432329177856
+Epoch: 9, Steps: 130 | Train Loss: 0.5208645 Vali Loss: 0.2655069 Test Loss: 0.3767659
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.005242880000000002
+	iters: 100, epoch: 10 | loss: 0.4884963
+	speed: 0.2909s/iter; left time: 765.4250s
+Epoch: 10 cost time: 12.215655088424683
+Epoch: 10, Steps: 130 | Train Loss: 0.5211414 Vali Loss: 0.2655459 Test Loss: 0.3743536
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.004194304000000002
+	iters: 100, epoch: 11 | loss: 0.6616955
+	speed: 0.3067s/iter; left time: 767.0704s
+Epoch: 11 cost time: 12.854063272476196
+Epoch: 11, Steps: 130 | Train Loss: 0.5205785 Vali Loss: 0.2644915 Test Loss: 0.3744745
+Validation loss decreased (0.265017 --> 0.264492).  Saving model ...
+Updating learning rate to 0.003355443200000002
+	iters: 100, epoch: 12 | loss: 0.5586228
+	speed: 0.2870s/iter; left time: 680.5245s
+Epoch: 12 cost time: 12.40541934967041
+Epoch: 12, Steps: 130 | Train Loss: 0.5195616 Vali Loss: 0.2656629 Test Loss: 0.3747548
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.002684354560000001
+	iters: 100, epoch: 13 | loss: 0.4117131
+	speed: 0.2913s/iter; left time: 652.8675s
+Epoch: 13 cost time: 12.496551275253296
+Epoch: 13, Steps: 130 | Train Loss: 0.5205770 Vali Loss: 0.2654261 Test Loss: 0.3769966
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.0021474836480000013
+	iters: 100, epoch: 14 | loss: 0.4409002
+	speed: 0.2961s/iter; left time: 625.1447s
+Epoch: 14 cost time: 12.576403379440308
+Epoch: 14, Steps: 130 | Train Loss: 0.5192559 Vali Loss: 0.2658476 Test Loss: 0.3749343
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.0017179869184000011
+	iters: 100, epoch: 15 | loss: 0.4093013
+	speed: 0.2839s/iter; left time: 562.4279s
+Epoch: 15 cost time: 11.415379524230957
+Epoch: 15, Steps: 130 | Train Loss: 0.5196616 Vali Loss: 0.2645828 Test Loss: 0.3748076
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 0.0013743895347200009
+	iters: 100, epoch: 16 | loss: 0.5483248
+	speed: 0.2349s/iter; left time: 434.8503s
+Epoch: 16 cost time: 9.801249265670776
+Epoch: 16, Steps: 130 | Train Loss: 0.5198073 Vali Loss: 0.2649346 Test Loss: 0.3739740
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : ETTm2_336_720_SparseTSF_ETTm2_ftM_sl336_pl720_test_0_seed2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 10801
+mse:0.3680550158023834, mae:0.38232311606407166, rse:0.4876416325569153

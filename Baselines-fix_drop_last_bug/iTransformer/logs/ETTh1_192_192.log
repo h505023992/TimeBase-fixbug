@@ -1,0 +1,109 @@
+Args in experiment:
+Namespace(is_training=1, model_id='ETTh1_192_192', model='iTransformer', data='ETTh1', root_path='./dataset/', data_path='ETTh1.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=192, label_len=48, pred_len=192, enc_in=7, dec_in=7, c_out=7, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=2, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=True, partial_start_index=0)
+Use GPU: cuda:2
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv1d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+MACs: 3228160.0
+Params: 248896.0
+3.23M MACs
+>>>>>>>start training : ETTh1_192_192_iTransformer_ETTh1_M_ft192_sl48_ll192_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 8257
+val 2689
+test 2689
+	iters: 100, epoch: 1 | loss: 0.4508177
+	speed: 0.0478s/iter; left time: 118.5098s
+	iters: 200, epoch: 1 | loss: 0.4242788
+	speed: 0.0307s/iter; left time: 73.0766s
+Max Memory (MB): 13.744140625
+Epoch: 1 cost time: 9.9064781665802
+Epoch: 1, Steps: 258 | Train Loss: 0.5217922 Vali Loss: 1.0380064 Test Loss: 0.4707308
+Validation loss decreased (inf --> 1.038006).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.4287811
+	speed: 0.2789s/iter; left time: 620.0733s
+	iters: 200, epoch: 2 | loss: 0.4510252
+	speed: 0.0271s/iter; left time: 57.4986s
+Max Memory (MB): 13.744140625
+Epoch: 2 cost time: 7.859582424163818
+Epoch: 2, Steps: 258 | Train Loss: 0.4411855 Vali Loss: 1.0015459 Test Loss: 0.4462962
+Validation loss decreased (1.038006 --> 1.001546).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.4553145
+	speed: 0.2584s/iter; left time: 507.7381s
+	iters: 200, epoch: 3 | loss: 0.4584681
+	speed: 0.0281s/iter; left time: 52.3505s
+Max Memory (MB): 13.744140625
+Epoch: 3 cost time: 7.9611594676971436
+Epoch: 3, Steps: 258 | Train Loss: 0.4273262 Vali Loss: 0.9917310 Test Loss: 0.4457119
+Validation loss decreased (1.001546 --> 0.991731).  Saving model ...
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.3373308
+	speed: 0.2537s/iter; left time: 433.0702s
+	iters: 200, epoch: 4 | loss: 0.3827811
+	speed: 0.0324s/iter; left time: 52.1002s
+Max Memory (MB): 13.744140625
+Epoch: 4 cost time: 8.498473882675171
+Epoch: 4, Steps: 258 | Train Loss: 0.4218312 Vali Loss: 0.9843043 Test Loss: 0.4462889
+Validation loss decreased (0.991731 --> 0.984304).  Saving model ...
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.4430408
+	speed: 0.2916s/iter; left time: 422.4745s
+	iters: 200, epoch: 5 | loss: 0.3913277
+	speed: 0.0300s/iter; left time: 40.4049s
+Max Memory (MB): 13.744140625
+Epoch: 5 cost time: 8.926240921020508
+Epoch: 5, Steps: 258 | Train Loss: 0.4190407 Vali Loss: 0.9803005 Test Loss: 0.4468195
+Validation loss decreased (0.984304 --> 0.980301).  Saving model ...
+Updating learning rate to 6.25e-06
+	iters: 100, epoch: 6 | loss: 0.4863637
+	speed: 0.2708s/iter; left time: 322.5698s
+	iters: 200, epoch: 6 | loss: 0.4245307
+	speed: 0.0312s/iter; left time: 34.0102s
+Max Memory (MB): 13.744140625
+Epoch: 6 cost time: 9.164376735687256
+Epoch: 6, Steps: 258 | Train Loss: 0.4174965 Vali Loss: 0.9774557 Test Loss: 0.4466951
+Validation loss decreased (0.980301 --> 0.977456).  Saving model ...
+Updating learning rate to 3.125e-06
+	iters: 100, epoch: 7 | loss: 0.3841427
+	speed: 0.3131s/iter; left time: 292.1292s
+	iters: 200, epoch: 7 | loss: 0.3485081
+	speed: 0.0358s/iter; left time: 29.8126s
+Max Memory (MB): 13.744140625
+Epoch: 7 cost time: 10.55611538887024
+Epoch: 7, Steps: 258 | Train Loss: 0.4167978 Vali Loss: 0.9766976 Test Loss: 0.4468313
+Validation loss decreased (0.977456 --> 0.976698).  Saving model ...
+Updating learning rate to 1.5625e-06
+	iters: 100, epoch: 8 | loss: 0.4564990
+	speed: 0.3459s/iter; left time: 233.4557s
+	iters: 200, epoch: 8 | loss: 0.4945184
+	speed: 0.0349s/iter; left time: 20.0807s
+Max Memory (MB): 13.744140625
+Epoch: 8 cost time: 10.149339437484741
+Epoch: 8, Steps: 258 | Train Loss: 0.4165030 Vali Loss: 0.9763293 Test Loss: 0.4469326
+Validation loss decreased (0.976698 --> 0.976329).  Saving model ...
+Updating learning rate to 7.8125e-07
+	iters: 100, epoch: 9 | loss: 0.3897570
+	speed: 0.2986s/iter; left time: 124.5188s
+	iters: 200, epoch: 9 | loss: 0.3846344
+	speed: 0.0383s/iter; left time: 12.1314s
+Max Memory (MB): 13.744140625
+Epoch: 9 cost time: 10.486851692199707
+Epoch: 9, Steps: 258 | Train Loss: 0.4163628 Vali Loss: 0.9761968 Test Loss: 0.4469060
+Validation loss decreased (0.976329 --> 0.976197).  Saving model ...
+Updating learning rate to 3.90625e-07
+	iters: 100, epoch: 10 | loss: 0.4522023
+	speed: 0.3225s/iter; left time: 51.2730s
+	iters: 200, epoch: 10 | loss: 0.4345581
+	speed: 0.0348s/iter; left time: 2.0525s
+Max Memory (MB): 13.744140625
+Epoch: 10 cost time: 9.837040662765503
+Epoch: 10, Steps: 258 | Train Loss: 0.4162892 Vali Loss: 0.9760848 Test Loss: 0.4469189
+Validation loss decreased (0.976197 --> 0.976085).  Saving model ...
+Updating learning rate to 1.953125e-07
+>>>>>>>testing : ETTh1_192_192_iTransformer_ETTh1_M_ft192_sl48_ll192_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2689
+test shape: (2689, 1, 192, 7) (2689, 1, 192, 7)
+test shape: (2689, 192, 7) (2689, 192, 7)
+mse:0.4469187557697296, mae:0.4450027048587799

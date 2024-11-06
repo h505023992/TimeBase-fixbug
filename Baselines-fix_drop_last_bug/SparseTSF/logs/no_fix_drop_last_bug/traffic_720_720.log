@@ -1,0 +1,62 @@
+Args in experiment:
+Namespace(is_training=1, model_id='traffic_720_720', model='SparseTSF', data='custom', root_path='./dataset/', data_path='traffic.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=720, label_len=48, pred_len=720, period_len=24, basis_num=6, fc_dropout=0.05, head_dropout=0.0, patch_len=16, stride=8, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=7, individual=0, embed_type=0, enc_in=862, dec_in=7, c_out=7, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=1, distil=True, dropout=0.05, embed='learned', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=30, batch_size=128, patience=5, learning_rate=0.03, des='test', loss='mse', lradj='type3', pct_start=0.3, use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=0, devices='0,1', test_flop=False)
+Use GPU: cuda:0
+model的参数数量: 925
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv1d'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+MACs: 34135200.0
+Params: 925.0
+34.14M MACs
+>>>>>>>start training : traffic_720_720_SparseTSF_custom_ftM_sl720_pl720_test_0_seed2023>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 10841
+val 1037
+test 2789
+Max Memory (MB): 3157.73291015625
+Epoch: 1 cost time: 60.81224846839905
+Epoch: 1, Steps: 84 | Train Loss: 0.6163055 Vali Loss: 0.5423646 Test Loss: 0.6563851
+Validation loss decreased (inf --> 0.542365).  Saving model ...
+Updating learning rate to 0.03
+Max Memory (MB): 3409.5009765625
+Epoch: 2 cost time: 59.972517013549805
+Epoch: 2, Steps: 84 | Train Loss: 0.3210967 Vali Loss: 0.3926870 Test Loss: 0.4562400
+Validation loss decreased (0.542365 --> 0.392687).  Saving model ...
+Updating learning rate to 0.03
+Max Memory (MB): 3409.5009765625
+Epoch: 3 cost time: 58.31528162956238
+Epoch: 3, Steps: 84 | Train Loss: 0.2731645 Vali Loss: 0.3860680 Test Loss: 0.4470899
+Validation loss decreased (0.392687 --> 0.386068).  Saving model ...
+Updating learning rate to 0.03
+Max Memory (MB): 3409.5009765625
+Epoch: 4 cost time: 58.95210266113281
+Epoch: 4, Steps: 84 | Train Loss: 0.2715166 Vali Loss: 0.3849748 Test Loss: 0.4440416
+Validation loss decreased (0.386068 --> 0.384975).  Saving model ...
+Updating learning rate to 0.024
+Max Memory (MB): 3409.5009765625
+Epoch: 5 cost time: 53.823713064193726
+Epoch: 5, Steps: 84 | Train Loss: 0.2711541 Vali Loss: 0.3885437 Test Loss: 0.4545736
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.019200000000000002
+Max Memory (MB): 3409.5009765625
+Epoch: 6 cost time: 58.902820348739624
+Epoch: 6, Steps: 84 | Train Loss: 0.2714033 Vali Loss: 0.3860293 Test Loss: 0.4462722
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.015360000000000004
+Max Memory (MB): 3409.5009765625
+Epoch: 7 cost time: 59.79164433479309
+Epoch: 7, Steps: 84 | Train Loss: 0.2710363 Vali Loss: 0.3854041 Test Loss: 0.4467368
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.012288000000000002
+Max Memory (MB): 3409.5009765625
+Epoch: 8 cost time: 58.62733006477356
+Epoch: 8, Steps: 84 | Train Loss: 0.2708006 Vali Loss: 0.3857858 Test Loss: 0.4467895
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 0.009830400000000001
+Max Memory (MB): 3409.5009765625
+Epoch: 9 cost time: 60.37558650970459
+Epoch: 9, Steps: 84 | Train Loss: 0.2708180 Vali Loss: 0.3858459 Test Loss: 0.4483427
+EarlyStopping counter: 5 out of 5
+Early stopping
+Final Max Memory (MB): 3409.5009765625
+>>>>>>>testing : traffic_720_720_SparseTSF_custom_ftM_sl720_pl720_test_0_seed2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2789
+mse:0.44404858350753784, mae:0.2937867045402527, rse:0.5439892411231995

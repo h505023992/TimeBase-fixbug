@@ -1,0 +1,101 @@
+Args in experiment:
+Namespace(is_training=1, model_id='weather_720_96', model='SparseTSF', data='custom', root_path='./dataset/', data_path='weather.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=720, label_len=48, pred_len=96, period_len=4, basis_num=6, fc_dropout=0.05, head_dropout=0.0, patch_len=16, stride=8, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=7, individual=0, embed_type=0, enc_in=21, dec_in=7, c_out=7, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=1, distil=True, dropout=0.05, embed='learned', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=30, batch_size=256, patience=5, learning_rate=0.02, des='test', loss='mse', lradj='type3', pct_start=0.3, use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=0, devices='0,1', test_flop=False)
+Use GPU: cuda:0
+model的参数数量: 4325
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv1d'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+MACs: 438480.0
+Params: 4325.0
+438480.0 MACs
+>>>>>>>start training : weather_720_96_SparseTSF_custom_ftM_sl720_pl96_test_0_seed2023>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 36072
+val 5175
+test 10444
+	iters: 100, epoch: 1 | loss: 0.5335579
+	speed: 0.0556s/iter; left time: 228.0727s
+Max Memory (MB): 226.8046875
+Epoch: 1 cost time: 7.688069105148315
+Epoch: 1, Steps: 140 | Train Loss: 0.5906634 Vali Loss: 0.4551834 Test Loss: 0.1913048
+Validation loss decreased (inf --> 0.455183).  Saving model ...
+Updating learning rate to 0.02
+	iters: 100, epoch: 2 | loss: 0.3195834
+	speed: 0.1519s/iter; left time: 601.8171s
+Max Memory (MB): 226.8046875
+Epoch: 2 cost time: 8.86134386062622
+Epoch: 2, Steps: 140 | Train Loss: 0.4580655 Vali Loss: 0.4210976 Test Loss: 0.1771156
+Validation loss decreased (0.455183 --> 0.421098).  Saving model ...
+Updating learning rate to 0.02
+	iters: 100, epoch: 3 | loss: 0.5797407
+	speed: 0.1519s/iter; left time: 580.5484s
+Max Memory (MB): 226.8046875
+Epoch: 3 cost time: 8.471842527389526
+Epoch: 3, Steps: 140 | Train Loss: 0.4454839 Vali Loss: 0.4157547 Test Loss: 0.1732173
+Validation loss decreased (0.421098 --> 0.415755).  Saving model ...
+Updating learning rate to 0.02
+	iters: 100, epoch: 4 | loss: 0.3549978
+	speed: 0.1536s/iter; left time: 565.4002s
+Max Memory (MB): 226.8046875
+Epoch: 4 cost time: 8.64887523651123
+Epoch: 4, Steps: 140 | Train Loss: 0.4408177 Vali Loss: 0.4148846 Test Loss: 0.1758434
+Validation loss decreased (0.415755 --> 0.414885).  Saving model ...
+Updating learning rate to 0.016
+	iters: 100, epoch: 5 | loss: 0.3212162
+	speed: 0.1556s/iter; left time: 550.8347s
+Max Memory (MB): 226.8046875
+Epoch: 5 cost time: 8.61003565788269
+Epoch: 5, Steps: 140 | Train Loss: 0.4394782 Vali Loss: 0.4133363 Test Loss: 0.1747869
+Validation loss decreased (0.414885 --> 0.413336).  Saving model ...
+Updating learning rate to 0.012800000000000002
+	iters: 100, epoch: 6 | loss: 0.3402186
+	speed: 0.1563s/iter; left time: 531.4418s
+Max Memory (MB): 226.8046875
+Epoch: 6 cost time: 8.510779619216919
+Epoch: 6, Steps: 140 | Train Loss: 0.4371343 Vali Loss: 0.4181662 Test Loss: 0.1728874
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.010240000000000003
+	iters: 100, epoch: 7 | loss: 0.5842389
+	speed: 0.1546s/iter; left time: 504.0783s
+Max Memory (MB): 226.8046875
+Epoch: 7 cost time: 8.295034170150757
+Epoch: 7, Steps: 140 | Train Loss: 0.4365301 Vali Loss: 0.4124104 Test Loss: 0.1733554
+Validation loss decreased (0.413336 --> 0.412410).  Saving model ...
+Updating learning rate to 0.008192000000000001
+	iters: 100, epoch: 8 | loss: 0.4175021
+	speed: 0.1528s/iter; left time: 476.9984s
+Max Memory (MB): 226.8046875
+Epoch: 8 cost time: 8.104604005813599
+Epoch: 8, Steps: 140 | Train Loss: 0.4376802 Vali Loss: 0.4140309 Test Loss: 0.1727760
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.0065536000000000014
+	iters: 100, epoch: 9 | loss: 0.4049033
+	speed: 0.1227s/iter; left time: 365.6789s
+Max Memory (MB): 226.8046875
+Epoch: 9 cost time: 6.1759021282196045
+Epoch: 9, Steps: 140 | Train Loss: 0.4377957 Vali Loss: 0.4164149 Test Loss: 0.1742542
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.005242880000000002
+	iters: 100, epoch: 10 | loss: 0.3434575
+	speed: 0.1214s/iter; left time: 344.8611s
+Max Memory (MB): 226.8046875
+Epoch: 10 cost time: 7.6883649826049805
+Epoch: 10, Steps: 140 | Train Loss: 0.4373243 Vali Loss: 0.4155487 Test Loss: 0.1733658
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.004194304000000002
+	iters: 100, epoch: 11 | loss: 0.3693702
+	speed: 0.1383s/iter; left time: 373.4444s
+Max Memory (MB): 226.8046875
+Epoch: 11 cost time: 8.894486427307129
+Epoch: 11, Steps: 140 | Train Loss: 0.4367650 Vali Loss: 0.4137107 Test Loss: 0.1724450
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 0.003355443200000002
+	iters: 100, epoch: 12 | loss: 0.5028192
+	speed: 0.1664s/iter; left time: 426.1408s
+Max Memory (MB): 226.8046875
+Epoch: 12 cost time: 9.178176641464233
+Epoch: 12, Steps: 140 | Train Loss: 0.4364390 Vali Loss: 0.4127339 Test Loss: 0.1730758
+EarlyStopping counter: 5 out of 5
+Early stopping
+Final Max Memory (MB): 226.8046875
+>>>>>>>testing : weather_720_96_SparseTSF_custom_ftM_sl720_pl96_test_0_seed2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 10444
+mse:0.17335551977157593, mae:0.22772911190986633, rse:0.5480923056602478

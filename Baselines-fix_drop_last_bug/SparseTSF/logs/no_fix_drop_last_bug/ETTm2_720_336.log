@@ -1,0 +1,115 @@
+Args in experiment:
+Namespace(is_training=1, model_id='ETTm2_720_336', model='SparseTSF', data='ETTm2', root_path='./dataset/', data_path='ETTm2.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=720, label_len=48, pred_len=336, period_len=4, basis_num=6, fc_dropout=0.05, head_dropout=0.0, patch_len=16, stride=8, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=7, individual=0, embed_type=0, enc_in=7, dec_in=7, c_out=7, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=1, distil=True, dropout=0.05, embed='learned', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=30, batch_size=256, patience=5, learning_rate=0.02, des='test', loss='mse', lradj='type3', pct_start=0.3, use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=0, devices='0,1', test_flop=False)
+Use GPU: cuda:0
+model的参数数量: 15125
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv1d'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+MACs: 448560.0
+Params: 15125.0
+448560.0 MACs
+>>>>>>>start training : ETTm2_720_336_SparseTSF_ETTm2_ftM_sl720_pl336_test_0_seed2023>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 33505
+val 11185
+test 11185
+	iters: 100, epoch: 1 | loss: 0.3333665
+	speed: 0.0539s/iter; left time: 205.0014s
+Max Memory (MB): 218.32470703125
+Epoch: 1 cost time: 6.58195948600769
+Epoch: 1, Steps: 130 | Train Loss: 0.4589712 Vali Loss: 0.2145739 Test Loss: 0.2974209
+Validation loss decreased (inf --> 0.214574).  Saving model ...
+Updating learning rate to 0.02
+	iters: 100, epoch: 2 | loss: 0.3597415
+	speed: 0.1144s/iter; left time: 419.9255s
+Max Memory (MB): 218.32470703125
+Epoch: 2 cost time: 5.514675617218018
+Epoch: 2, Steps: 130 | Train Loss: 0.3938548 Vali Loss: 0.1981024 Test Loss: 0.2771359
+Validation loss decreased (0.214574 --> 0.198102).  Saving model ...
+Updating learning rate to 0.02
+	iters: 100, epoch: 3 | loss: 0.3864730
+	speed: 0.1182s/iter; left time: 418.4937s
+Max Memory (MB): 218.32470703125
+Epoch: 3 cost time: 5.300859451293945
+Epoch: 3, Steps: 130 | Train Loss: 0.3854945 Vali Loss: 0.1974910 Test Loss: 0.2765409
+Validation loss decreased (0.198102 --> 0.197491).  Saving model ...
+Updating learning rate to 0.02
+	iters: 100, epoch: 4 | loss: 0.3568265
+	speed: 0.1299s/iter; left time: 443.0353s
+Max Memory (MB): 218.32470703125
+Epoch: 4 cost time: 6.608105421066284
+Epoch: 4, Steps: 130 | Train Loss: 0.3835040 Vali Loss: 0.1950413 Test Loss: 0.2718234
+Validation loss decreased (0.197491 --> 0.195041).  Saving model ...
+Updating learning rate to 0.016
+	iters: 100, epoch: 5 | loss: 0.4316281
+	speed: 0.1457s/iter; left time: 478.2033s
+Max Memory (MB): 218.32470703125
+Epoch: 5 cost time: 6.917644739151001
+Epoch: 5, Steps: 130 | Train Loss: 0.3812580 Vali Loss: 0.1934250 Test Loss: 0.2722899
+Validation loss decreased (0.195041 --> 0.193425).  Saving model ...
+Updating learning rate to 0.012800000000000002
+	iters: 100, epoch: 6 | loss: 0.2804615
+	speed: 0.1469s/iter; left time: 462.9791s
+Max Memory (MB): 218.32470703125
+Epoch: 6 cost time: 6.826424598693848
+Epoch: 6, Steps: 130 | Train Loss: 0.3785223 Vali Loss: 0.1939116 Test Loss: 0.2718359
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.010240000000000003
+	iters: 100, epoch: 7 | loss: 0.3526422
+	speed: 0.1433s/iter; left time: 433.0278s
+Max Memory (MB): 218.32470703125
+Epoch: 7 cost time: 7.247262239456177
+Epoch: 7, Steps: 130 | Train Loss: 0.3775846 Vali Loss: 0.1924680 Test Loss: 0.2707774
+Validation loss decreased (0.193425 --> 0.192468).  Saving model ...
+Updating learning rate to 0.008192000000000001
+	iters: 100, epoch: 8 | loss: 0.4060965
+	speed: 0.1331s/iter; left time: 384.7667s
+Max Memory (MB): 218.32470703125
+Epoch: 8 cost time: 6.632368087768555
+Epoch: 8, Steps: 130 | Train Loss: 0.3779544 Vali Loss: 0.1940955 Test Loss: 0.2733555
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.0065536000000000014
+	iters: 100, epoch: 9 | loss: 0.3636602
+	speed: 0.1324s/iter; left time: 365.4350s
+Max Memory (MB): 218.32470703125
+Epoch: 9 cost time: 5.499728679656982
+Epoch: 9, Steps: 130 | Train Loss: 0.3759898 Vali Loss: 0.1919903 Test Loss: 0.2724569
+Validation loss decreased (0.192468 --> 0.191990).  Saving model ...
+Updating learning rate to 0.005242880000000002
+	iters: 100, epoch: 10 | loss: 0.4171797
+	speed: 0.1051s/iter; left time: 276.6091s
+Max Memory (MB): 218.32470703125
+Epoch: 10 cost time: 4.657873630523682
+Epoch: 10, Steps: 130 | Train Loss: 0.3756675 Vali Loss: 0.1923665 Test Loss: 0.2698776
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.004194304000000002
+	iters: 100, epoch: 11 | loss: 0.4219155
+	speed: 0.1344s/iter; left time: 336.1388s
+Max Memory (MB): 218.32470703125
+Epoch: 11 cost time: 7.232407093048096
+Epoch: 11, Steps: 130 | Train Loss: 0.3757469 Vali Loss: 0.1939818 Test Loss: 0.2731114
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.003355443200000002
+	iters: 100, epoch: 12 | loss: 0.3653736
+	speed: 0.1604s/iter; left time: 380.3188s
+Max Memory (MB): 218.32470703125
+Epoch: 12 cost time: 7.733834505081177
+Epoch: 12, Steps: 130 | Train Loss: 0.3748655 Vali Loss: 0.1948135 Test Loss: 0.2720926
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.002684354560000001
+	iters: 100, epoch: 13 | loss: 0.3709835
+	speed: 0.1460s/iter; left time: 327.1001s
+Max Memory (MB): 218.32470703125
+Epoch: 13 cost time: 6.238284349441528
+Epoch: 13, Steps: 130 | Train Loss: 0.3756989 Vali Loss: 0.1930248 Test Loss: 0.2697240
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 0.0021474836480000013
+	iters: 100, epoch: 14 | loss: 0.4960684
+	speed: 0.1163s/iter; left time: 245.5521s
+Max Memory (MB): 218.32470703125
+Epoch: 14 cost time: 6.049283504486084
+Epoch: 14, Steps: 130 | Train Loss: 0.3746891 Vali Loss: 0.1927588 Test Loss: 0.2708490
+EarlyStopping counter: 5 out of 5
+Early stopping
+Final Max Memory (MB): 218.32470703125
+>>>>>>>testing : ETTm2_720_336_SparseTSF_ETTm2_ftM_sl720_pl336_test_0_seed2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 11185
+mse:0.27245697379112244, mae:0.32851269841194153, rse:0.41991907358169556

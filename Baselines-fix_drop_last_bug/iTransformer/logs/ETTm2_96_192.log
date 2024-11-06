@@ -1,0 +1,119 @@
+Args in experiment:
+Namespace(is_training=1, model_id='ETTm2_96_192', model='iTransformer', data='ETTm2', root_path='./dataset/', data_path='ETTm2.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=96, label_len=48, pred_len=192, enc_in=7, dec_in=7, c_out=7, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=2, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=True, partial_start_index=0)
+Use GPU: cuda:2
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv1d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+MACs: 3068416.0
+Params: 236608.0
+3.07M MACs
+>>>>>>>start training : ETTm2_96_192_iTransformer_ETTm2_M_ft96_sl48_ll192_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 34273
+val 11329
+test 11329
+	iters: 100, epoch: 1 | loss: 0.5528154
+	speed: 0.0837s/iter; left time: 888.2810s
+	iters: 200, epoch: 1 | loss: 0.1954492
+	speed: 0.0531s/iter; left time: 558.6058s
+	iters: 300, epoch: 1 | loss: 0.2975211
+	speed: 0.0599s/iter; left time: 623.9981s
+	iters: 400, epoch: 1 | loss: 0.3164551
+	speed: 0.0574s/iter; left time: 591.7843s
+	iters: 500, epoch: 1 | loss: 0.2111027
+	speed: 0.0586s/iter; left time: 598.4541s
+	iters: 600, epoch: 1 | loss: 0.2384174
+	speed: 0.0617s/iter; left time: 623.5848s
+	iters: 700, epoch: 1 | loss: 0.2589088
+	speed: 0.0554s/iter; left time: 554.7037s
+	iters: 800, epoch: 1 | loss: 0.1602216
+	speed: 0.0546s/iter; left time: 540.9933s
+	iters: 900, epoch: 1 | loss: 0.4134845
+	speed: 0.0559s/iter; left time: 548.6477s
+	iters: 1000, epoch: 1 | loss: 0.1647315
+	speed: 0.0591s/iter; left time: 573.5258s
+Max Memory (MB): 13.216796875
+Epoch: 1 cost time: 64.19761681556702
+Epoch: 1, Steps: 1071 | Train Loss: 0.3479528 Vali Loss: 0.1834620 Test Loss: 0.2531907
+Validation loss decreased (inf --> 0.183462).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.3017425
+	speed: 2.0525s/iter; left time: 19580.9985s
+	iters: 200, epoch: 2 | loss: 0.2738842
+	speed: 0.0536s/iter; left time: 505.5473s
+	iters: 300, epoch: 2 | loss: 0.5458971
+	speed: 0.0494s/iter; left time: 461.7350s
+	iters: 400, epoch: 2 | loss: 0.4616654
+	speed: 0.0506s/iter; left time: 467.4887s
+	iters: 500, epoch: 2 | loss: 0.2326699
+	speed: 0.0531s/iter; left time: 484.9965s
+	iters: 600, epoch: 2 | loss: 0.2521154
+	speed: 0.0535s/iter; left time: 483.9692s
+	iters: 700, epoch: 2 | loss: 0.2192126
+	speed: 0.0537s/iter; left time: 480.3678s
+	iters: 800, epoch: 2 | loss: 0.2767017
+	speed: 0.0607s/iter; left time: 536.2739s
+	iters: 900, epoch: 2 | loss: 0.3471809
+	speed: 0.0599s/iter; left time: 523.6375s
+	iters: 1000, epoch: 2 | loss: 0.2007441
+	speed: 0.0569s/iter; left time: 492.0336s
+Max Memory (MB): 13.216796875
+Epoch: 2 cost time: 60.17546892166138
+Epoch: 2, Steps: 1071 | Train Loss: 0.3170080 Vali Loss: 0.1855328 Test Loss: 0.2519666
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 1.0279748
+	speed: 2.1045s/iter; left time: 17823.3800s
+	iters: 200, epoch: 3 | loss: 0.1664206
+	speed: 0.0514s/iter; left time: 429.8354s
+	iters: 300, epoch: 3 | loss: 0.4301701
+	speed: 0.0505s/iter; left time: 417.6840s
+	iters: 400, epoch: 3 | loss: 0.4161788
+	speed: 0.0499s/iter; left time: 407.4775s
+	iters: 500, epoch: 3 | loss: 0.2563751
+	speed: 0.0495s/iter; left time: 399.4458s
+	iters: 600, epoch: 3 | loss: 0.2274063
+	speed: 0.0497s/iter; left time: 396.4360s
+	iters: 700, epoch: 3 | loss: 0.5204759
+	speed: 0.0532s/iter; left time: 418.5201s
+	iters: 800, epoch: 3 | loss: 0.3050298
+	speed: 0.0490s/iter; left time: 380.6264s
+	iters: 900, epoch: 3 | loss: 0.2248107
+	speed: 0.0490s/iter; left time: 376.0232s
+	iters: 1000, epoch: 3 | loss: 0.5772908
+	speed: 0.0509s/iter; left time: 385.2906s
+Max Memory (MB): 13.216796875
+Epoch: 3 cost time: 55.69388675689697
+Epoch: 3, Steps: 1071 | Train Loss: 0.3058232 Vali Loss: 0.1845343 Test Loss: 0.2517841
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.7677000
+	speed: 2.1593s/iter; left time: 15974.6580s
+	iters: 200, epoch: 4 | loss: 0.1579898
+	speed: 0.0517s/iter; left time: 377.6653s
+	iters: 300, epoch: 4 | loss: 0.2186136
+	speed: 0.0551s/iter; left time: 396.8534s
+	iters: 400, epoch: 4 | loss: 0.2499617
+	speed: 0.0550s/iter; left time: 390.3236s
+	iters: 500, epoch: 4 | loss: 0.4985058
+	speed: 0.0547s/iter; left time: 382.8408s
+	iters: 600, epoch: 4 | loss: 0.3121010
+	speed: 0.0569s/iter; left time: 392.7313s
+	iters: 700, epoch: 4 | loss: 0.5642146
+	speed: 0.0556s/iter; left time: 378.2040s
+	iters: 800, epoch: 4 | loss: 0.4848940
+	speed: 0.0552s/iter; left time: 369.4998s
+	iters: 900, epoch: 4 | loss: 0.1897821
+	speed: 0.0523s/iter; left time: 345.2514s
+	iters: 1000, epoch: 4 | loss: 0.2185582
+	speed: 0.0485s/iter; left time: 315.0227s
+Max Memory (MB): 13.216796875
+Epoch: 4 cost time: 58.53145909309387
+Epoch: 4, Steps: 1071 | Train Loss: 0.3012464 Vali Loss: 0.1884741 Test Loss: 0.2530086
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : ETTm2_96_192_iTransformer_ETTm2_M_ft96_sl48_ll192_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 11329
+test shape: (11329, 1, 192, 7) (11329, 1, 192, 7)
+test shape: (11329, 192, 7) (11329, 192, 7)
+mse:0.2531907260417938, mae:0.3143003582954407

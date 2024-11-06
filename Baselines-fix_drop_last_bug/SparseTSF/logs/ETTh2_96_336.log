@@ -1,0 +1,62 @@
+Args in experiment:
+Namespace(is_training=1, model_id='ETTh2_96_336', model='SparseTSF', data='ETTh2', root_path='./dataset/', data_path='ETTh2.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=96, label_len=48, pred_len=336, period_len=24, fc_dropout=0.05, head_dropout=0.0, patch_len=16, stride=8, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=25, individual=0, embed_type=0, enc_in=7, dec_in=7, c_out=7, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=1, distil=True, dropout=0.05, embed='learned', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=30, batch_size=256, patience=5, learning_rate=0.03, des='test', loss='mse', lradj='type3', pct_start=0.3, use_amp=False, use_gpu=True, gpu=2, use_multi_gpu=0, devices='0,1', test_flop=False)
+Use GPU: cuda:2
+>>>>>>>start training : ETTh2_96_336_SparseTSF_ETTh2_ftM_sl96_pl336_test_0_seed2023>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 8209
+val 2545
+test 2545
+Epoch: 1 cost time: 6.17450737953186
+Epoch: 1, Steps: 32 | Train Loss: 0.7604568 Vali Loss: 0.4313766 Test Loss: 0.4863969
+Validation loss decreased (inf --> 0.431377).  Saving model ...
+Updating learning rate to 0.03
+Epoch: 2 cost time: 2.331157922744751
+Epoch: 2, Steps: 32 | Train Loss: 0.7118140 Vali Loss: 0.3827544 Test Loss: 0.4378880
+Validation loss decreased (0.431377 --> 0.382754).  Saving model ...
+Updating learning rate to 0.03
+Epoch: 3 cost time: 2.3034169673919678
+Epoch: 3, Steps: 32 | Train Loss: 0.6717892 Vali Loss: 0.3736772 Test Loss: 0.4300247
+Validation loss decreased (0.382754 --> 0.373677).  Saving model ...
+Updating learning rate to 0.03
+Epoch: 4 cost time: 2.178619623184204
+Epoch: 4, Steps: 32 | Train Loss: 0.6626860 Vali Loss: 0.3709999 Test Loss: 0.4252517
+Validation loss decreased (0.373677 --> 0.371000).  Saving model ...
+Updating learning rate to 0.024
+Epoch: 5 cost time: 2.215775966644287
+Epoch: 5, Steps: 32 | Train Loss: 0.6613071 Vali Loss: 0.3735339 Test Loss: 0.4244091
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.019200000000000002
+Epoch: 6 cost time: 2.2431819438934326
+Epoch: 6, Steps: 32 | Train Loss: 0.6586949 Vali Loss: 0.3666405 Test Loss: 0.4257333
+Validation loss decreased (0.371000 --> 0.366641).  Saving model ...
+Updating learning rate to 0.015360000000000004
+Epoch: 7 cost time: 2.204474449157715
+Epoch: 7, Steps: 32 | Train Loss: 0.6588135 Vali Loss: 0.3679887 Test Loss: 0.4226595
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.012288000000000002
+Epoch: 8 cost time: 2.352738857269287
+Epoch: 8, Steps: 32 | Train Loss: 0.6585894 Vali Loss: 0.3624203 Test Loss: 0.4244741
+Validation loss decreased (0.366641 --> 0.362420).  Saving model ...
+Updating learning rate to 0.009830400000000001
+Epoch: 9 cost time: 2.182382106781006
+Epoch: 9, Steps: 32 | Train Loss: 0.6570228 Vali Loss: 0.3707409 Test Loss: 0.4229023
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.007864320000000003
+Epoch: 10 cost time: 2.2534306049346924
+Epoch: 10, Steps: 32 | Train Loss: 0.6577594 Vali Loss: 0.3680078 Test Loss: 0.4240745
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.006291456000000002
+Epoch: 11 cost time: 2.2978243827819824
+Epoch: 11, Steps: 32 | Train Loss: 0.6578713 Vali Loss: 0.3719059 Test Loss: 0.4225925
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.005033164800000003
+Epoch: 12 cost time: 2.2441940307617188
+Epoch: 12, Steps: 32 | Train Loss: 0.6575017 Vali Loss: 0.3691831 Test Loss: 0.4235170
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 0.004026531840000002
+Epoch: 13 cost time: 2.286283016204834
+Epoch: 13, Steps: 32 | Train Loss: 0.6572807 Vali Loss: 0.3660992 Test Loss: 0.4234874
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : ETTh2_96_336_SparseTSF_ETTh2_ftM_sl96_pl336_test_0_seed2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2545
+mse:0.4213876724243164, mae:0.4276047348976135, rse:0.5190156698226929

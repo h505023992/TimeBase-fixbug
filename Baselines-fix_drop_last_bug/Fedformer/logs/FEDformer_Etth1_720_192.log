@@ -1,0 +1,48 @@
+Args in experiment:
+Namespace(is_training=1, task_id='ETTh1_720_192', model='FEDformer', version='Fourier', mode_select='random', modes=64, L=3, base='legendre', cross_activation='tanh', data='ETTh1', root_path='./dataset/', data_path='ETTh1.csv', features='M', target='OT', freq='h', detail_freq='h', checkpoints='./checkpoints/', seq_len=720, label_len=360, pred_len=192, enc_in=7, dec_in=7, c_out=7, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=[25], factor=3, distil=True, dropout=0.05, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='mse', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1')
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 6, 9, 14, 15, 22, 28, 35, 36, 37, 38, 46, 48, 58, 64, 77, 88, 94, 95, 106, 108, 113, 118, 124, 131, 136, 139, 140, 156, 158, 163, 165, 167, 175, 179, 191, 199, 202, 204, 205, 206, 216, 222, 226, 237, 247, 258, 260, 266, 269, 273, 276, 277, 285, 301, 304, 325, 331, 332, 339, 343, 352]
+fourier enhanced block used!
+modes=64, index=[1, 3, 17, 20, 26, 28, 31, 32, 38, 43, 45, 46, 52, 62, 79, 80, 81, 85, 86, 90, 93, 100, 102, 103, 107, 111, 115, 119, 121, 122, 124, 125, 130, 141, 151, 154, 167, 173, 174, 177, 179, 183, 187, 194, 200, 208, 210, 218, 219, 220, 223, 227, 230, 236, 237, 248, 250, 252, 253, 266, 268, 270, 271, 273]
+ fourier enhanced cross attention used!
+modes_q=64, index_q=[7, 8, 16, 17, 18, 19, 20, 21, 32, 35, 38, 61, 62, 63, 65, 67, 70, 72, 74, 77, 85, 86, 91, 93, 110, 111, 115, 121, 122, 128, 129, 133, 136, 140, 141, 143, 152, 153, 156, 160, 163, 175, 176, 179, 184, 193, 196, 202, 206, 208, 210, 212, 213, 217, 219, 234, 247, 248, 256, 263, 265, 271, 273, 275]
+modes_kv=64, index_kv=[4, 10, 13, 15, 26, 31, 32, 44, 49, 52, 59, 62, 75, 81, 91, 92, 95, 98, 106, 114, 122, 133, 135, 136, 138, 152, 160, 166, 170, 175, 176, 178, 179, 185, 192, 194, 199, 200, 206, 210, 216, 219, 221, 226, 228, 236, 263, 272, 273, 278, 298, 299, 305, 306, 313, 324, 328, 337, 348, 349, 351, 356, 357, 358]
+enc_modes: 64, dec_modes: 64
+>>>>>>>start training : ETTh1_720_192_FEDformer_random_modes64_ETTh1_ftM_sl720_ll360_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 7729
+val 2689
+test 2689
+Epoch: 1 cost time: 180.19989585876465
+Epoch: 1, Steps: 242 | Train Loss: 0.5361630 Vali Loss: 1.2098325 Test Loss: 0.5112764
+Validation loss decreased (inf --> 1.209833).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 178.81048321723938
+Epoch: 2, Steps: 242 | Train Loss: 0.4781975 Vali Loss: 1.2045348 Test Loss: 0.4933585
+Validation loss decreased (1.209833 --> 1.204535).  Saving model ...
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 177.970365524292
+Epoch: 3, Steps: 242 | Train Loss: 0.4538843 Vali Loss: 1.2046447 Test Loss: 0.4889990
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 178.7594211101532
+Epoch: 4, Steps: 242 | Train Loss: 0.4410024 Vali Loss: 1.1912780 Test Loss: 0.4825215
+Validation loss decreased (1.204535 --> 1.191278).  Saving model ...
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 180.21954870224
+Epoch: 5, Steps: 242 | Train Loss: 0.4335325 Vali Loss: 1.1989250 Test Loss: 0.4886362
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 179.829434633255
+Epoch: 6, Steps: 242 | Train Loss: 0.4295688 Vali Loss: 1.2180332 Test Loss: 0.4894464
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 3.125e-06
+Epoch: 7 cost time: 180.23488807678223
+Epoch: 7, Steps: 242 | Train Loss: 0.4273933 Vali Loss: 1.2008477 Test Loss: 0.4902221
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : ETTh1_720_192_FEDformer_random_modes64_ETTh1_ftM_sl720_ll360_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2689
+test shape: (2689, 192, 7) (2689, 192, 7)
+test shape: (2689, 192, 7) (2689, 192, 7)
+mse:0.48067721724510193, mae:0.4975053668022156

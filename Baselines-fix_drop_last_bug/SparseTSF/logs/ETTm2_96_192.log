@@ -1,0 +1,64 @@
+Args in experiment:
+Namespace(is_training=1, model_id='ETTm2_96_192', model='SparseTSF', data='ETTm2', root_path='./dataset/', data_path='ETTm2.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=96, label_len=48, pred_len=192, period_len=4, fc_dropout=0.05, head_dropout=0.0, patch_len=16, stride=8, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=25, individual=0, embed_type=0, enc_in=7, dec_in=7, c_out=7, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=1, distil=True, dropout=0.05, embed='learned', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=30, batch_size=256, patience=5, learning_rate=0.02, des='test', loss='mse', lradj='type3', pct_start=0.3, use_amp=False, use_gpu=True, gpu=2, use_multi_gpu=0, devices='0,1', test_flop=False)
+Use GPU: cuda:2
+>>>>>>>start training : ETTm2_96_192_SparseTSF_ETTm2_ftM_sl96_pl192_test_0_seed2023>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 34273
+val 11329
+test 11329
+	iters: 100, epoch: 1 | loss: 0.4335379
+	speed: 0.1351s/iter; left time: 525.5472s
+Epoch: 1 cost time: 15.871297121047974
+Epoch: 1, Steps: 133 | Train Loss: 0.3986358 Vali Loss: 0.1949452 Test Loss: 0.2709170
+Validation loss decreased (inf --> 0.194945).  Saving model ...
+Updating learning rate to 0.02
+	iters: 100, epoch: 2 | loss: 0.3473285
+	speed: 0.2675s/iter; left time: 1005.1542s
+Epoch: 2 cost time: 10.363924980163574
+Epoch: 2, Steps: 133 | Train Loss: 0.3449675 Vali Loss: 0.1747793 Test Loss: 0.2477215
+Validation loss decreased (0.194945 --> 0.174779).  Saving model ...
+Updating learning rate to 0.02
+	iters: 100, epoch: 3 | loss: 0.3865469
+	speed: 0.2838s/iter; left time: 1028.7870s
+Epoch: 3 cost time: 11.710049152374268
+Epoch: 3, Steps: 133 | Train Loss: 0.3407744 Vali Loss: 0.1740685 Test Loss: 0.2487803
+Validation loss decreased (0.174779 --> 0.174068).  Saving model ...
+Updating learning rate to 0.02
+	iters: 100, epoch: 4 | loss: 0.3284482
+	speed: 0.2695s/iter; left time: 940.9893s
+Epoch: 4 cost time: 10.569380283355713
+Epoch: 4, Steps: 133 | Train Loss: 0.3387124 Vali Loss: 0.1722050 Test Loss: 0.2455803
+Validation loss decreased (0.174068 --> 0.172205).  Saving model ...
+Updating learning rate to 0.016
+	iters: 100, epoch: 5 | loss: 0.3893929
+	speed: 0.2641s/iter; left time: 887.1374s
+Epoch: 5 cost time: 10.296804189682007
+Epoch: 5, Steps: 133 | Train Loss: 0.3393435 Vali Loss: 0.1745567 Test Loss: 0.2491662
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.012800000000000002
+	iters: 100, epoch: 6 | loss: 0.4389491
+	speed: 0.2778s/iter; left time: 896.0807s
+Epoch: 6 cost time: 11.49331021308899
+Epoch: 6, Steps: 133 | Train Loss: 0.3392643 Vali Loss: 0.1727421 Test Loss: 0.2464668
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.010240000000000003
+	iters: 100, epoch: 7 | loss: 0.3760613
+	speed: 0.2592s/iter; left time: 801.6354s
+Epoch: 7 cost time: 10.232554912567139
+Epoch: 7, Steps: 133 | Train Loss: 0.3376967 Vali Loss: 0.1727601 Test Loss: 0.2466341
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.008192000000000001
+	iters: 100, epoch: 8 | loss: 0.2289921
+	speed: 0.2749s/iter; left time: 813.8421s
+Epoch: 8 cost time: 12.0995614528656
+Epoch: 8, Steps: 133 | Train Loss: 0.3373113 Vali Loss: 0.1723920 Test Loss: 0.2464633
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 0.0065536000000000014
+	iters: 100, epoch: 9 | loss: 0.2901730
+	speed: 0.2644s/iter; left time: 747.3541s
+Epoch: 9 cost time: 11.065197706222534
+Epoch: 9, Steps: 133 | Train Loss: 0.3372271 Vali Loss: 0.1728697 Test Loss: 0.2460973
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : ETTm2_96_192_SparseTSF_ETTm2_ftM_sl96_pl192_test_0_seed2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 11329
+mse:0.24804997444152832, mae:0.3057139813899994, rse:0.40314817428588867

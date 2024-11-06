@@ -1,0 +1,56 @@
+Args in experiment:
+Namespace(is_training=1, task_id='traffic_96_96', model='FEDformer', version='Fourier', mode_select='random', modes=64, L=3, base='legendre', cross_activation='tanh', data='custom', root_path='./dataset/', data_path='traffic.csv', features='M', target='OT', freq='h', detail_freq='h', checkpoints='./checkpoints/', seq_len=96, label_len=48, pred_len=96, enc_in=862, dec_in=862, c_out=862, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=[25], factor=3, distil=True, dropout=0.05, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=30, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='mse', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1')
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 16, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 36, 37, 38, 39, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 52, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71]
+ fourier enhanced cross attention used!
+modes_q=64, index_q=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 27, 28, 29, 30, 31, 33, 34, 35, 36, 37, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 68, 69, 71]
+modes_kv=48, index_kv=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+enc_modes: 48, dec_modes: 64
+>>>>>>>start training : traffic_96_96_FEDformer_random_modes64_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 12089
+val 1661
+test 3413
+Epoch: 1 cost time: 204.81490993499756
+Epoch: 1, Steps: 378 | Train Loss: 0.4145223 Vali Loss: 0.4943177 Test Loss: 0.6088781
+Validation loss decreased (inf --> 0.494318).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 199.32067251205444
+Epoch: 2, Steps: 378 | Train Loss: 0.2682124 Vali Loss: 0.4676702 Test Loss: 0.5787104
+Validation loss decreased (0.494318 --> 0.467670).  Saving model ...
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 202.30222344398499
+Epoch: 3, Steps: 378 | Train Loss: 0.2463829 Vali Loss: 0.4638046 Test Loss: 0.5737709
+Validation loss decreased (0.467670 --> 0.463805).  Saving model ...
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 200.03675484657288
+Epoch: 4, Steps: 378 | Train Loss: 0.2389072 Vali Loss: 0.4609038 Test Loss: 0.5767900
+Validation loss decreased (0.463805 --> 0.460904).  Saving model ...
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 202.83648824691772
+Epoch: 5, Steps: 378 | Train Loss: 0.2354972 Vali Loss: 0.4613600 Test Loss: 0.5758210
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 198.27813148498535
+Epoch: 6, Steps: 378 | Train Loss: 0.2338142 Vali Loss: 0.4606218 Test Loss: 0.5744377
+Validation loss decreased (0.460904 --> 0.460622).  Saving model ...
+Updating learning rate to 3.125e-06
+Epoch: 7 cost time: 185.97076439857483
+Epoch: 7, Steps: 378 | Train Loss: 0.2329611 Vali Loss: 0.4613943 Test Loss: 0.5748953
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.5625e-06
+Epoch: 8 cost time: 185.6551501750946
+Epoch: 8, Steps: 378 | Train Loss: 0.2324932 Vali Loss: 0.4613951 Test Loss: 0.5750843
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 7.8125e-07
+Epoch: 9 cost time: 184.31506371498108
+Epoch: 9, Steps: 378 | Train Loss: 0.2322393 Vali Loss: 0.4613346 Test Loss: 0.5757187
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : traffic_96_96_FEDformer_random_modes64_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 3413
+test shape: (3413, 96, 862) (3413, 96, 862)
+test shape: (3413, 96, 862) (3413, 96, 862)
+mse:0.5750861167907715, mae:0.35788750648498535

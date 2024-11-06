@@ -1,0 +1,87 @@
+Args in experiment:
+Namespace(is_training=1, model_id='ETTh1_720_96', model='SparseTSF', data='ETTh1', root_path='./dataset/', data_path='ETTh1.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=720, label_len=48, pred_len=96, period_len=24, basis_num=6, fc_dropout=0.05, head_dropout=0.0, patch_len=16, stride=8, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=7, individual=0, embed_type=0, enc_in=7, dec_in=7, c_out=7, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=1, distil=True, dropout=0.05, embed='learned', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=30, batch_size=256, patience=5, learning_rate=0.02, des='test', loss='mse', lradj='type3', pct_start=0.3, use_amp=False, use_gpu=True, gpu=7, use_multi_gpu=0, devices='0,1', test_flop=False)
+Use GPU: cuda:7
+model的参数数量: 145
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv1d'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+MACs: 146160.0
+Params: 145.0
+146160.0 MACs
+>>>>>>>start training : ETTh1_720_96_SparseTSF_ETTh1_ftM_sl720_pl96_test_0_seed2023>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 7825
+val 2785
+test 2785
+Max Memory (MB): 0.0
+Epoch: 1 cost time: 1.0624597072601318
+Epoch: 1, Steps: 30 | Train Loss: 0.6069935 Vali Loss: 1.1778562 Test Loss: 0.5283469
+Validation loss decreased (inf --> 1.177856).  Saving model ...
+Updating learning rate to 0.02
+Max Memory (MB): 0.0
+Epoch: 2 cost time: 0.9641509056091309
+Epoch: 2, Steps: 30 | Train Loss: 0.5101678 Vali Loss: 0.9758917 Test Loss: 0.4860384
+Validation loss decreased (1.177856 --> 0.975892).  Saving model ...
+Updating learning rate to 0.02
+Max Memory (MB): 0.0
+Epoch: 3 cost time: 0.9537513256072998
+Epoch: 3, Steps: 30 | Train Loss: 0.3995698 Vali Loss: 0.8004920 Test Loss: 0.3935644
+Validation loss decreased (0.975892 --> 0.800492).  Saving model ...
+Updating learning rate to 0.02
+Max Memory (MB): 0.0
+Epoch: 4 cost time: 0.9777390956878662
+Epoch: 4, Steps: 30 | Train Loss: 0.3586242 Vali Loss: 0.7343265 Test Loss: 0.3564780
+Validation loss decreased (0.800492 --> 0.734327).  Saving model ...
+Updating learning rate to 0.016
+Max Memory (MB): 0.0
+Epoch: 5 cost time: 0.9718739986419678
+Epoch: 5, Steps: 30 | Train Loss: 0.3484110 Vali Loss: 0.7323254 Test Loss: 0.3563323
+Validation loss decreased (0.734327 --> 0.732325).  Saving model ...
+Updating learning rate to 0.012800000000000002
+Max Memory (MB): 0.0
+Epoch: 6 cost time: 0.9698598384857178
+Epoch: 6, Steps: 30 | Train Loss: 0.3454371 Vali Loss: 0.7160980 Test Loss: 0.3527525
+Validation loss decreased (0.732325 --> 0.716098).  Saving model ...
+Updating learning rate to 0.010240000000000003
+Max Memory (MB): 0.0
+Epoch: 7 cost time: 0.988060474395752
+Epoch: 7, Steps: 30 | Train Loss: 0.3451999 Vali Loss: 0.7208949 Test Loss: 0.3525694
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.008192000000000001
+Max Memory (MB): 0.0
+Epoch: 8 cost time: 0.9895405769348145
+Epoch: 8, Steps: 30 | Train Loss: 0.3442266 Vali Loss: 0.7253647 Test Loss: 0.3542120
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.0065536000000000014
+Max Memory (MB): 0.0
+Epoch: 9 cost time: 1.1539721488952637
+Epoch: 9, Steps: 30 | Train Loss: 0.3444131 Vali Loss: 0.7145497 Test Loss: 0.3540785
+Validation loss decreased (0.716098 --> 0.714550).  Saving model ...
+Updating learning rate to 0.005242880000000002
+Max Memory (MB): 0.0
+Epoch: 10 cost time: 1.0527944564819336
+Epoch: 10, Steps: 30 | Train Loss: 0.3440328 Vali Loss: 0.7220901 Test Loss: 0.3526085
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.004194304000000002
+Max Memory (MB): 0.0
+Epoch: 11 cost time: 0.9894371032714844
+Epoch: 11, Steps: 30 | Train Loss: 0.3433233 Vali Loss: 0.7270721 Test Loss: 0.3557089
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.003355443200000002
+Max Memory (MB): 0.0
+Epoch: 12 cost time: 1.0436880588531494
+Epoch: 12, Steps: 30 | Train Loss: 0.3441419 Vali Loss: 0.7176396 Test Loss: 0.3534769
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.002684354560000001
+Max Memory (MB): 0.0
+Epoch: 13 cost time: 0.9633293151855469
+Epoch: 13, Steps: 30 | Train Loss: 0.3434135 Vali Loss: 0.7214485 Test Loss: 0.3528536
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 0.0021474836480000013
+Max Memory (MB): 0.0
+Epoch: 14 cost time: 0.9764406681060791
+Epoch: 14, Steps: 30 | Train Loss: 0.3440297 Vali Loss: 0.7183852 Test Loss: 0.3532189
+EarlyStopping counter: 5 out of 5
+Early stopping
+Final Max Memory (MB): 0.0
+>>>>>>>testing : ETTh1_720_96_SparseTSF_ETTh1_ftM_sl720_pl96_test_0_seed2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2785
+mse:0.3540785610675812, mae:0.3841495215892792, rse:0.5666362047195435

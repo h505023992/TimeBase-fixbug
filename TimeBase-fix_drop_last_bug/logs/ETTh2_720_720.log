@@ -1,0 +1,58 @@
+Args in experiment:
+Namespace(is_training=1, model_id='ETTh2_720_720', model='LightTimeBaseTST', data='ETTh2', root_path='./dataset/', data_path='ETTh2.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=720, label_len=48, pred_len=720, period_len=24, basis_num=6, use_period_norm=1, use_orthogonal=1, orthogonal_weight=0.12, fc_dropout=0.05, head_dropout=0.0, patch_len=16, stride=8, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=7, individual=0, embed_type=0, enc_in=7, dec_in=7, c_out=7, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=1, distil=True, dropout=0.05, embed='learned', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=30, batch_size=64, patience=5, learning_rate=0.4, des='test', loss='mse', lradj='type3', pct_start=0.3, use_amp=False, use_gpu=True, gpu=1, use_multi_gpu=0, devices='0,1', test_flop=False)
+Use GPU: cuda:1
+396
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+MACs: 60480.0
+Params: 396.0
+60480.0 MACs
+>>>>>>>start training : ETTh2_720_720_LightTimeBaseTST_ETTh2_ftM_sl720_pl720_test_0_seed2023>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 7201
+val 2161
+test 2161
+	iters: 100, epoch: 1 | loss: 0.9494377
+	speed: 0.0127s/iter; left time: 41.7321s
+Max Memory (MB): 12.04833984375
+Epoch: 1 cost time: 1.429842233657837
+Epoch: 1, Steps: 113 | Train Loss: 0.8830946 Vali Loss: 0.6389020 Test Loss: 0.4017879
+Validation loss decreased (inf --> 0.638902).  Saving model ...
+Updating learning rate to 0.4
+	iters: 100, epoch: 2 | loss: 1.2299248
+	speed: 0.0298s/iter; left time: 94.8629s
+Max Memory (MB): 12.9951171875
+Epoch: 2 cost time: 1.4286811351776123
+Epoch: 2, Steps: 113 | Train Loss: 1.0533754 Vali Loss: 0.7315335 Test Loss: 0.4552755
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.4
+	iters: 100, epoch: 3 | loss: 0.8663123
+	speed: 0.0310s/iter; left time: 94.9664s
+Max Memory (MB): 12.9951171875
+Epoch: 3 cost time: 1.4166967868804932
+Epoch: 3, Steps: 113 | Train Loss: 0.9386890 Vali Loss: 0.7360229 Test Loss: 0.4314525
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.4
+	iters: 100, epoch: 4 | loss: 0.6657917
+	speed: 0.0301s/iter; left time: 88.8496s
+Max Memory (MB): 12.9951171875
+Epoch: 4 cost time: 1.3920283317565918
+Epoch: 4, Steps: 113 | Train Loss: 0.9013614 Vali Loss: 0.6615918 Test Loss: 0.4243973
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.32000000000000006
+	iters: 100, epoch: 5 | loss: 0.7379387
+	speed: 0.0314s/iter; left time: 89.0973s
+Max Memory (MB): 12.9951171875
+Epoch: 5 cost time: 1.42991304397583
+Epoch: 5, Steps: 113 | Train Loss: 0.8961980 Vali Loss: 0.7078929 Test Loss: 0.4383164
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 0.25600000000000006
+	iters: 100, epoch: 6 | loss: 0.8280132
+	speed: 0.0313s/iter; left time: 85.3632s
+Max Memory (MB): 12.9951171875
+Epoch: 6 cost time: 1.4878771305084229
+Epoch: 6, Steps: 113 | Train Loss: 0.8747391 Vali Loss: 0.6655679 Test Loss: 0.4155059
+EarlyStopping counter: 5 out of 5
+Early stopping
+Final Max Memory (MB): 12.9951171875
+>>>>>>>testing : ETTh2_720_720_LightTimeBaseTST_ETTh2_ftM_sl720_pl720_test_0_seed2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2161
+mse:0.4001553952693939, mae:0.44884252548217773, rse:0.5056151747703552

@@ -1,0 +1,123 @@
+True
+Args in experiment:
+[1mBasic Config[0m
+  Task Name:          long_term_forecast  Is Training:        1                   
+  Model ID:           ETTh2_96_96         Model:              TimesNet            
+
+[1mData Loader[0m
+  Data:               ETTh2               Root Path:          ./dataset/          
+  Data Path:          ETTh2.csv           Features:           M                   
+  Target:             OT                  Freq:               h                   
+  Checkpoints:        ./checkpoints/      
+
+[1mForecasting Task[0m
+  Seq Len:            96                  Label Len:          48                  
+  Pred Len:           96                  Seasonal Patterns:  Monthly             
+  Inverse:            0                   
+
+[1mModel Parameters[0m
+  Top k:              5                   Num Kernels:        6                   
+  Enc In:             7                   Dec In:             7                   
+  C Out:              7                   d model:            16                  
+  n heads:            8                   e layers:           2                   
+  d layers:           1                   d FF:               32                  
+  Moving Avg:         25                  Factor:             3                   
+  Distil:             1                   Dropout:            0.1                 
+  Embed:              timeF               Activation:         gelu                
+
+[1mRun Parameters[0m
+  Num Workers:        10                  Itr:                1                   
+  Train Epochs:       30                  Batch Size:         32                  
+  Patience:           3                   Learning Rate:      0.0001              
+  Des:                Exp                 Loss:               MSE                 
+  Lradj:              type1               Use Amp:            0                   
+
+[1mGPU[0m
+  Use GPU:            1                   GPU:                0                   
+  Use Multi GPU:      0                   Devices:            0,1,2,3             
+
+[1mDe-stationary Projector Params[0m
+  P Hidden Dims:      128, 128            P Hidden Layers:    2                   
+
+Use GPU: cuda:0
+>>>>>>>start training : long_term_forecast_ETTh2_96_96_TimesNet_ETTh2_ftM_sl96_ll48_pl96_dm16_nh8_el2_dl1_df32_expand2_dc4_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 8449
+val 2785
+test 2785
+	iters: 100, epoch: 1 | loss: 0.3085045
+	speed: 0.1631s/iter; left time: 1280.7905s
+	iters: 200, epoch: 1 | loss: 0.5335607
+	speed: 0.1187s/iter; left time: 920.4281s
+Epoch: 1 cost time: 36.25900077819824
+Epoch: 1, Steps: 265 | Train Loss: 0.5277287 Vali Loss: 0.2713727 Test Loss: 0.3534320
+Validation loss decreased (inf --> 0.271373).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.4273033
+	speed: 0.3122s/iter; left time: 2367.9924s
+	iters: 200, epoch: 2 | loss: 0.4413827
+	speed: 0.1246s/iter; left time: 932.6701s
+Epoch: 2 cost time: 33.417545795440674
+Epoch: 2, Steps: 265 | Train Loss: 0.4269986 Vali Loss: 0.2540935 Test Loss: 0.3401720
+Validation loss decreased (0.271373 --> 0.254093).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.4286397
+	speed: 0.3316s/iter; left time: 2427.5925s
+	iters: 200, epoch: 3 | loss: 0.3260725
+	speed: 0.1272s/iter; left time: 918.2319s
+Epoch: 3 cost time: 34.526575565338135
+Epoch: 3, Steps: 265 | Train Loss: 0.3950145 Vali Loss: 0.2465898 Test Loss: 0.3290873
+Validation loss decreased (0.254093 --> 0.246590).  Saving model ...
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.5446275
+	speed: 0.3321s/iter; left time: 2343.5867s
+	iters: 200, epoch: 4 | loss: 0.4496638
+	speed: 0.1218s/iter; left time: 847.5862s
+Epoch: 4 cost time: 33.8878276348114
+Epoch: 4, Steps: 265 | Train Loss: 0.3819934 Vali Loss: 0.2520144 Test Loss: 0.3285067
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.5002360
+	speed: 0.3348s/iter; left time: 2273.8035s
+	iters: 200, epoch: 5 | loss: 0.2954436
+	speed: 0.1294s/iter; left time: 865.6149s
+Epoch: 5 cost time: 35.21907305717468
+Epoch: 5, Steps: 265 | Train Loss: 0.3791179 Vali Loss: 0.2472048 Test Loss: 0.3269295
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 6.25e-06
+	iters: 100, epoch: 6 | loss: 0.4022129
+	speed: 0.3403s/iter; left time: 2220.5223s
+	iters: 200, epoch: 6 | loss: 0.2039494
+	speed: 0.1295s/iter; left time: 832.4065s
+Epoch: 6 cost time: 35.31904435157776
+Epoch: 6, Steps: 265 | Train Loss: 0.3733123 Vali Loss: 0.2463181 Test Loss: 0.3263821
+Validation loss decreased (0.246590 --> 0.246318).  Saving model ...
+Updating learning rate to 3.125e-06
+	iters: 100, epoch: 7 | loss: 0.2669137
+	speed: 0.3398s/iter; left time: 2127.6519s
+	iters: 200, epoch: 7 | loss: 0.2779338
+	speed: 0.1275s/iter; left time: 785.6867s
+Epoch: 7 cost time: 34.814316272735596
+Epoch: 7, Steps: 265 | Train Loss: 0.3723855 Vali Loss: 0.2479588 Test Loss: 0.3254678
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.5625e-06
+	iters: 100, epoch: 8 | loss: 0.3242747
+	speed: 0.3298s/iter; left time: 1977.7002s
+	iters: 200, epoch: 8 | loss: 0.4045666
+	speed: 0.1282s/iter; left time: 755.6192s
+Epoch: 8 cost time: 34.53777861595154
+Epoch: 8, Steps: 265 | Train Loss: 0.3723288 Vali Loss: 0.2522735 Test Loss: 0.3253732
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 7.8125e-07
+	iters: 100, epoch: 9 | loss: 0.3124723
+	speed: 0.3331s/iter; left time: 1908.7338s
+	iters: 200, epoch: 9 | loss: 0.5558695
+	speed: 0.1289s/iter; left time: 725.6366s
+Epoch: 9 cost time: 34.724544286727905
+Epoch: 9, Steps: 265 | Train Loss: 0.3711108 Vali Loss: 0.2476388 Test Loss: 0.3253862
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : long_term_forecast_ETTh2_96_96_TimesNet_ETTh2_ftM_sl96_ll48_pl96_dm16_nh8_el2_dl1_df32_expand2_dc4_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2785
+test shape: (2785, 96, 7) (2785, 96, 7)
+test shape: (2785, 96, 7) (2785, 96, 7)
+mse:0.32859066128730774, mae:0.36950358748435974, dtw:not calculated

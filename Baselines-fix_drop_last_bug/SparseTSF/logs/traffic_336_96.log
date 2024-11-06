@@ -1,0 +1,66 @@
+Args in experiment:
+Namespace(is_training=1, model_id='traffic_336_96', model='SparseTSF', data='custom', root_path='./dataset/', data_path='traffic.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=336, label_len=48, pred_len=96, period_len=24, fc_dropout=0.05, head_dropout=0.0, patch_len=16, stride=8, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=25, individual=0, embed_type=0, enc_in=862, dec_in=7, c_out=7, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=1, distil=True, dropout=0.05, embed='learned', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=30, batch_size=128, patience=5, learning_rate=0.03, des='test', loss='mse', lradj='type3', pct_start=0.3, use_amp=False, use_gpu=True, gpu=2, use_multi_gpu=0, devices='0,1', test_flop=False)
+Use GPU: cuda:2
+>>>>>>>start training : traffic_336_96_SparseTSF_custom_ftM_sl336_pl96_test_0_seed2023>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 11849
+val 1661
+test 3413
+Epoch: 1 cost time: 44.25462532043457
+Epoch: 1, Steps: 92 | Train Loss: 0.6531847 Vali Loss: 0.5471938 Test Loss: 0.6665198
+Validation loss decreased (inf --> 0.547194).  Saving model ...
+Updating learning rate to 0.03
+Epoch: 2 cost time: 40.547996282577515
+Epoch: 2, Steps: 92 | Train Loss: 0.3079059 Vali Loss: 0.3475433 Test Loss: 0.4315182
+Validation loss decreased (0.547194 --> 0.347543).  Saving model ...
+Updating learning rate to 0.03
+Epoch: 3 cost time: 40.3554482460022
+Epoch: 3, Steps: 92 | Train Loss: 0.2527911 Vali Loss: 0.3419752 Test Loss: 0.4193522
+Validation loss decreased (0.347543 --> 0.341975).  Saving model ...
+Updating learning rate to 0.03
+Epoch: 4 cost time: 40.08652448654175
+Epoch: 4, Steps: 92 | Train Loss: 0.2506129 Vali Loss: 0.3406328 Test Loss: 0.4170700
+Validation loss decreased (0.341975 --> 0.340633).  Saving model ...
+Updating learning rate to 0.024
+Epoch: 5 cost time: 40.719494581222534
+Epoch: 5, Steps: 92 | Train Loss: 0.2505012 Vali Loss: 0.3403266 Test Loss: 0.4175098
+Validation loss decreased (0.340633 --> 0.340327).  Saving model ...
+Updating learning rate to 0.019200000000000002
+Epoch: 6 cost time: 40.317522287368774
+Epoch: 6, Steps: 92 | Train Loss: 0.2501370 Vali Loss: 0.3413976 Test Loss: 0.4167444
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.015360000000000004
+Epoch: 7 cost time: 40.669655561447144
+Epoch: 7, Steps: 92 | Train Loss: 0.2500566 Vali Loss: 0.3405453 Test Loss: 0.4176984
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.012288000000000002
+Epoch: 8 cost time: 39.90310883522034
+Epoch: 8, Steps: 92 | Train Loss: 0.2498522 Vali Loss: 0.3418554 Test Loss: 0.4184494
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.009830400000000001
+Epoch: 9 cost time: 40.071547746658325
+Epoch: 9, Steps: 92 | Train Loss: 0.2500284 Vali Loss: 0.3394834 Test Loss: 0.4171359
+Validation loss decreased (0.340327 --> 0.339483).  Saving model ...
+Updating learning rate to 0.007864320000000003
+Epoch: 10 cost time: 40.27821183204651
+Epoch: 10, Steps: 92 | Train Loss: 0.2499147 Vali Loss: 0.3408297 Test Loss: 0.4176580
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.006291456000000002
+Epoch: 11 cost time: 40.868595600128174
+Epoch: 11, Steps: 92 | Train Loss: 0.2497293 Vali Loss: 0.3399020 Test Loss: 0.4172555
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.005033164800000003
+Epoch: 12 cost time: 40.814038038253784
+Epoch: 12, Steps: 92 | Train Loss: 0.2498280 Vali Loss: 0.3412317 Test Loss: 0.4174322
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.004026531840000002
+Epoch: 13 cost time: 41.32423758506775
+Epoch: 13, Steps: 92 | Train Loss: 0.2498437 Vali Loss: 0.3400166 Test Loss: 0.4175380
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 0.0032212254720000015
+Epoch: 14 cost time: 40.98046326637268
+Epoch: 14, Steps: 92 | Train Loss: 0.2497743 Vali Loss: 0.3396816 Test Loss: 0.4172457
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : traffic_336_96_SparseTSF_custom_ftM_sl336_pl96_test_0_seed2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 3413
+mse:0.41537898778915405, mae:0.27905192971229553, rse:0.5336736440658569

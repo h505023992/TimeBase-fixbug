@@ -1,0 +1,73 @@
+Args in experiment:
+Namespace(is_training=1, model_id='ETTh2_192_192', model='iTransformer', data='ETTh2', root_path='./dataset/', data_path='ETTh2.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=192, label_len=48, pred_len=192, enc_in=7, dec_in=7, c_out=7, d_model=128, n_heads=8, e_layers=2, d_layers=1, d_ff=128, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=10, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='MSE', lradj='type1', use_amp=False, use_gpu=True, gpu=2, use_multi_gpu=False, devices='0,1,2,3', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=True, partial_start_index=0)
+Use GPU: cuda:2
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv1d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+MACs: 3228160.0
+Params: 248896.0
+3.23M MACs
+>>>>>>>start training : ETTh2_192_192_iTransformer_ETTh2_M_ft192_sl48_ll192_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 8257
+val 2689
+test 2689
+	iters: 100, epoch: 1 | loss: 0.5037296
+	speed: 0.0410s/iter; left time: 101.7660s
+	iters: 200, epoch: 1 | loss: 0.7388090
+	speed: 0.0234s/iter; left time: 55.6019s
+Max Memory (MB): 13.744140625
+Epoch: 1 cost time: 8.0362229347229
+Epoch: 1, Steps: 258 | Train Loss: 0.5881954 Vali Loss: 0.2949756 Test Loss: 0.3834738
+Validation loss decreased (inf --> 0.294976).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.5954210
+	speed: 0.2581s/iter; left time: 573.6802s
+	iters: 200, epoch: 2 | loss: 0.3159655
+	speed: 0.0256s/iter; left time: 54.3913s
+Max Memory (MB): 13.744140625
+Epoch: 2 cost time: 7.494922637939453
+Epoch: 2, Steps: 258 | Train Loss: 0.5142565 Vali Loss: 0.2900752 Test Loss: 0.3790577
+Validation loss decreased (0.294976 --> 0.290075).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.3213553
+	speed: 0.2393s/iter; left time: 470.2689s
+	iters: 200, epoch: 3 | loss: 0.3282658
+	speed: 0.0299s/iter; left time: 55.7855s
+Max Memory (MB): 13.744140625
+Epoch: 3 cost time: 8.56281065940857
+Epoch: 3, Steps: 258 | Train Loss: 0.4831654 Vali Loss: 0.2878938 Test Loss: 0.3834441
+Validation loss decreased (0.290075 --> 0.287894).  Saving model ...
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.5766044
+	speed: 0.2584s/iter; left time: 441.0336s
+	iters: 200, epoch: 4 | loss: 0.4730028
+	speed: 0.0271s/iter; left time: 43.6053s
+Max Memory (MB): 13.744140625
+Epoch: 4 cost time: 7.418599367141724
+Epoch: 4, Steps: 258 | Train Loss: 0.4698704 Vali Loss: 0.2893625 Test Loss: 0.3856753
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.7549073
+	speed: 0.2394s/iter; left time: 346.9617s
+	iters: 200, epoch: 5 | loss: 0.5545090
+	speed: 0.0258s/iter; left time: 34.8210s
+Max Memory (MB): 13.744140625
+Epoch: 5 cost time: 7.570120573043823
+Epoch: 5, Steps: 258 | Train Loss: 0.4626253 Vali Loss: 0.2896701 Test Loss: 0.3855390
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 6.25e-06
+	iters: 100, epoch: 6 | loss: 0.4264799
+	speed: 0.2389s/iter; left time: 284.5881s
+	iters: 200, epoch: 6 | loss: 0.7461875
+	speed: 0.0255s/iter; left time: 27.8136s
+Max Memory (MB): 13.744140625
+Epoch: 6 cost time: 7.467004776000977
+Epoch: 6, Steps: 258 | Train Loss: 0.4604982 Vali Loss: 0.2898138 Test Loss: 0.3858012
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : ETTh2_192_192_iTransformer_ETTh2_M_ft192_sl48_ll192_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2689
+test shape: (2689, 1, 192, 7) (2689, 1, 192, 7)
+test shape: (2689, 192, 7) (2689, 192, 7)
+mse:0.3834441304206848, mae:0.40716999769210815

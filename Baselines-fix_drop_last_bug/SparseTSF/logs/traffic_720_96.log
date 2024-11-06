@@ -1,0 +1,54 @@
+Args in experiment:
+Namespace(is_training=1, model_id='traffic_720_96', model='SparseTSF', data='custom', root_path='./dataset/', data_path='traffic.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=720, label_len=48, pred_len=96, period_len=24, fc_dropout=0.05, head_dropout=0.0, patch_len=16, stride=8, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=25, individual=0, embed_type=0, enc_in=862, dec_in=7, c_out=7, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=1, distil=True, dropout=0.05, embed='learned', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=30, batch_size=128, patience=5, learning_rate=0.03, des='test', loss='mse', lradj='type3', pct_start=0.3, use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=0, devices='0,1', test_flop=False)
+Use GPU: cuda:0
+>>>>>>>start training : traffic_720_96_SparseTSF_custom_ftM_sl720_pl96_test_0_seed2023>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 11465
+val 1661
+test 3413
+Epoch: 1 cost time: 45.06052923202515
+Epoch: 1, Steps: 89 | Train Loss: 0.5043368 Vali Loss: 0.4667610 Test Loss: 0.5724661
+Validation loss decreased (inf --> 0.466761).  Saving model ...
+Updating learning rate to 0.03
+Epoch: 2 cost time: 42.991299867630005
+Epoch: 2, Steps: 89 | Train Loss: 0.2681285 Vali Loss: 0.3323099 Test Loss: 0.3985950
+Validation loss decreased (0.466761 --> 0.332310).  Saving model ...
+Updating learning rate to 0.03
+Epoch: 3 cost time: 43.250755310058594
+Epoch: 3, Steps: 89 | Train Loss: 0.2355889 Vali Loss: 0.3271079 Test Loss: 0.3926959
+Validation loss decreased (0.332310 --> 0.327108).  Saving model ...
+Updating learning rate to 0.03
+Epoch: 4 cost time: 43.219619035720825
+Epoch: 4, Steps: 89 | Train Loss: 0.2339899 Vali Loss: 0.3287304 Test Loss: 0.3933277
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.024
+Epoch: 5 cost time: 43.2363817691803
+Epoch: 5, Steps: 89 | Train Loss: 0.2336096 Vali Loss: 0.3263857 Test Loss: 0.3934864
+Validation loss decreased (0.327108 --> 0.326386).  Saving model ...
+Updating learning rate to 0.019200000000000002
+Epoch: 6 cost time: 43.06108856201172
+Epoch: 6, Steps: 89 | Train Loss: 0.2330864 Vali Loss: 0.3262486 Test Loss: 0.3921222
+Validation loss decreased (0.326386 --> 0.326249).  Saving model ...
+Updating learning rate to 0.015360000000000004
+Epoch: 7 cost time: 42.9440803527832
+Epoch: 7, Steps: 89 | Train Loss: 0.2331849 Vali Loss: 0.3293361 Test Loss: 0.3924704
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.012288000000000002
+Epoch: 8 cost time: 43.08782124519348
+Epoch: 8, Steps: 89 | Train Loss: 0.2329222 Vali Loss: 0.3269821 Test Loss: 0.3912971
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.009830400000000001
+Epoch: 9 cost time: 43.71243071556091
+Epoch: 9, Steps: 89 | Train Loss: 0.2329676 Vali Loss: 0.3282885 Test Loss: 0.3913496
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.007864320000000003
+Epoch: 10 cost time: 43.617818117141724
+Epoch: 10, Steps: 89 | Train Loss: 0.2327874 Vali Loss: 0.3274254 Test Loss: 0.3927384
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 0.006291456000000002
+Epoch: 11 cost time: 43.73999500274658
+Epoch: 11, Steps: 89 | Train Loss: 0.2327691 Vali Loss: 0.3270096 Test Loss: 0.3916021
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : traffic_720_96_SparseTSF_custom_ftM_sl720_pl96_test_0_seed2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 3413
+mse:0.389201283454895, mae:0.26812994480133057, rse:0.5165835618972778

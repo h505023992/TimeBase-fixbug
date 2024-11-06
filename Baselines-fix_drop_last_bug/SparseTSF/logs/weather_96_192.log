@@ -1,0 +1,70 @@
+Args in experiment:
+Namespace(is_training=1, model_id='weather_96_192', model='SparseTSF', data='custom', root_path='./dataset/', data_path='weather.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=96, label_len=48, pred_len=192, period_len=4, fc_dropout=0.05, head_dropout=0.0, patch_len=16, stride=8, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=25, individual=0, embed_type=0, enc_in=21, dec_in=7, c_out=7, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=1, distil=True, dropout=0.05, embed='learned', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=30, batch_size=256, patience=5, learning_rate=0.02, des='test', loss='mse', lradj='type3', pct_start=0.3, use_amp=False, use_gpu=True, gpu=2, use_multi_gpu=0, devices='0,1', test_flop=False)
+Use GPU: cuda:2
+>>>>>>>start training : weather_96_192_SparseTSF_custom_ftM_sl96_pl192_test_0_seed2023>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 36600
+val 5079
+test 10348
+	iters: 100, epoch: 1 | loss: 0.7031254
+	speed: 0.1304s/iter; left time: 542.7710s
+Epoch: 1 cost time: 16.27809977531433
+Epoch: 1, Steps: 142 | Train Loss: 0.7477224 Vali Loss: 0.6244400 Test Loss: 0.2611222
+Validation loss decreased (inf --> 0.624440).  Saving model ...
+Updating learning rate to 0.02
+	iters: 100, epoch: 2 | loss: 0.4573191
+	speed: 0.2584s/iter; left time: 1038.7000s
+Epoch: 2 cost time: 13.342434883117676
+Epoch: 2, Steps: 142 | Train Loss: 0.5919552 Vali Loss: 0.5725460 Test Loss: 0.2454352
+Validation loss decreased (0.624440 --> 0.572546).  Saving model ...
+Updating learning rate to 0.02
+	iters: 100, epoch: 3 | loss: 0.5797299
+	speed: 0.2370s/iter; left time: 919.0230s
+Epoch: 3 cost time: 12.196270227432251
+Epoch: 3, Steps: 142 | Train Loss: 0.5817055 Vali Loss: 0.5641758 Test Loss: 0.2390427
+Validation loss decreased (0.572546 --> 0.564176).  Saving model ...
+Updating learning rate to 0.02
+	iters: 100, epoch: 4 | loss: 0.5310898
+	speed: 0.2326s/iter; left time: 868.9176s
+Epoch: 4 cost time: 11.24903416633606
+Epoch: 4, Steps: 142 | Train Loss: 0.5816211 Vali Loss: 0.5687545 Test Loss: 0.2407419
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.016
+	iters: 100, epoch: 5 | loss: 0.4901794
+	speed: 0.2157s/iter; left time: 774.9945s
+Epoch: 5 cost time: 10.715454816818237
+Epoch: 5, Steps: 142 | Train Loss: 0.5779895 Vali Loss: 0.5636268 Test Loss: 0.2415679
+Validation loss decreased (0.564176 --> 0.563627).  Saving model ...
+Updating learning rate to 0.012800000000000002
+	iters: 100, epoch: 6 | loss: 0.5884188
+	speed: 0.2353s/iter; left time: 811.8644s
+Epoch: 6 cost time: 11.440581798553467
+Epoch: 6, Steps: 142 | Train Loss: 0.5795859 Vali Loss: 0.5673076 Test Loss: 0.2417424
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.010240000000000003
+	iters: 100, epoch: 7 | loss: 0.5342712
+	speed: 0.2398s/iter; left time: 793.4608s
+Epoch: 7 cost time: 11.59224820137024
+Epoch: 7, Steps: 142 | Train Loss: 0.5779819 Vali Loss: 0.5708705 Test Loss: 0.2415979
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.008192000000000001
+	iters: 100, epoch: 8 | loss: 0.4998772
+	speed: 0.2238s/iter; left time: 708.7652s
+Epoch: 8 cost time: 11.526731014251709
+Epoch: 8, Steps: 142 | Train Loss: 0.5771195 Vali Loss: 0.5667711 Test Loss: 0.2416354
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.0065536000000000014
+	iters: 100, epoch: 9 | loss: 0.6447031
+	speed: 0.2433s/iter; left time: 735.8840s
+Epoch: 9 cost time: 12.026599168777466
+Epoch: 9, Steps: 142 | Train Loss: 0.5778855 Vali Loss: 0.5656845 Test Loss: 0.2400569
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 0.005242880000000002
+	iters: 100, epoch: 10 | loss: 0.5979243
+	speed: 0.2243s/iter; left time: 646.7643s
+Epoch: 10 cost time: 10.895006895065308
+Epoch: 10, Steps: 142 | Train Loss: 0.5781117 Vali Loss: 0.5662334 Test Loss: 0.2404482
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : weather_96_192_SparseTSF_custom_ftM_sl96_pl192_test_0_seed2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 10348
+mse:0.24366359412670135, mae:0.2730019986629486, rse:0.6497756838798523

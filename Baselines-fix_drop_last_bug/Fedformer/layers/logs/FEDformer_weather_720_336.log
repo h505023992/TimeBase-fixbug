@@ -1,0 +1,36 @@
+Args in experiment:
+Namespace(is_training=1, task_id='weather_720_336', model='FEDformer', version='Fourier', mode_select='random', modes=64, L=3, base='legendre', cross_activation='tanh', data='custom', root_path='./dataset/', data_path='weather.csv', features='M', target='OT', freq='h', detail_freq='h', checkpoints='./checkpoints/', seq_len=720, label_len=360, pred_len=336, enc_in=21, dec_in=21, c_out=21, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=[25], factor=3, distil=True, dropout=0.05, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=30, batch_size=32, patience=3, learning_rate=0.0001, des='Exp', loss='mse', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1')
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 6, 9, 14, 15, 22, 28, 35, 36, 37, 38, 46, 48, 58, 64, 77, 88, 94, 95, 106, 108, 113, 118, 124, 131, 136, 139, 140, 156, 158, 163, 165, 167, 175, 179, 191, 199, 202, 204, 205, 206, 216, 222, 226, 237, 247, 258, 260, 266, 269, 273, 276, 277, 285, 301, 304, 325, 331, 332, 339, 343, 352]
+fourier enhanced block used!
+modes=64, index=[3, 6, 9, 16, 17, 18, 20, 28, 32, 34, 40, 45, 46, 61, 79, 80, 81, 90, 92, 93, 101, 106, 116, 121, 130, 131, 133, 152, 154, 157, 169, 179, 186, 187, 193, 198, 201, 206, 208, 226, 236, 241, 244, 247, 252, 260, 268, 286, 289, 293, 298, 300, 301, 305, 307, 311, 313, 315, 319, 322, 325, 328, 332, 343]
+ fourier enhanced cross attention used!
+modes_q=64, index_q=[3, 12, 13, 17, 20, 22, 23, 25, 27, 30, 32, 35, 38, 48, 50, 58, 59, 70, 74, 76, 77, 89, 93, 99, 100, 103, 105, 107, 113, 114, 116, 122, 134, 137, 162, 166, 182, 187, 191, 192, 193, 210, 214, 227, 229, 235, 248, 255, 256, 257, 280, 282, 294, 302, 303, 313, 322, 326, 329, 330, 331, 335, 341, 342]
+modes_kv=64, index_kv=[10, 13, 14, 17, 21, 28, 38, 40, 49, 51, 53, 64, 65, 70, 82, 83, 92, 93, 95, 104, 111, 122, 126, 127, 131, 135, 148, 149, 154, 181, 184, 185, 186, 187, 188, 190, 196, 211, 217, 220, 227, 232, 237, 245, 257, 261, 263, 265, 266, 269, 272, 278, 280, 297, 298, 300, 302, 304, 305, 319, 326, 333, 345, 353]
+enc_modes: 64, dec_modes: 64
+>>>>>>>start training : weather_720_336_FEDformer_random_modes64_custom_ftM_sl720_ll360_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 35832
+val 4935
+test 10204
+Epoch: 1 cost time: 828.3896026611328
+Epoch: 1, Steps: 1120 | Train Loss: 0.5818995 Vali Loss: 0.6038452 Test Loss: 0.3702454
+Validation loss decreased (inf --> 0.603845).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 820.1919522285461
+Epoch: 2, Steps: 1120 | Train Loss: 0.5262220 Vali Loss: 0.6059979 Test Loss: 0.3905693
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 815.388979434967
+Epoch: 3, Steps: 1120 | Train Loss: 0.4952321 Vali Loss: 0.6112695 Test Loss: 0.3997022
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 809.0893347263336
+Epoch: 4, Steps: 1120 | Train Loss: 0.4811168 Vali Loss: 0.6155915 Test Loss: 0.4011573
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : weather_720_336_FEDformer_random_modes64_custom_ftM_sl720_ll360_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 10204
+test shape: (10204, 336, 21) (10204, 336, 21)
+test shape: (10204, 336, 21) (10204, 336, 21)
+mse:0.37030890583992004, mae:0.4078225791454315

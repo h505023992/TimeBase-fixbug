@@ -27,7 +27,6 @@ python -u run_longExp.py \
     --pred_len "$pred_len" \
     --period_len 24 \
     --enc_in 7 \
-    --individual 1\
     --train_epochs 30 \
     --patience 5 \
     --basis_num 6 \
@@ -85,7 +84,7 @@ python -u run_longExp.py \
 pred_len=720
 python -u run_longExp.py \
     --is_training 1 \
-    --orthogonal_weight 0.04 \
+    --orthogonal_weight 0.08 \
     --root_path "$root_path_name" \
     --data_path "$data_path_name" \
     --model_id "${model_id_name}_${seq_len}_${pred_len}" \
@@ -94,7 +93,7 @@ python -u run_longExp.py \
     --features M \
     --seq_len "$seq_len" \
     --pred_len "$pred_len" \
-    --period_len 4 \
+    --period_len 24 \
     --enc_in 7 \
     --train_epochs 30 \
     --patience 5 \
@@ -102,4 +101,4 @@ python -u run_longExp.py \
     --gpu $gpu \
     --itr 1 \
     --batch_size 512 \
-    --learning_rate 5e-2 > "$dir/${model_id_name}_${seq_len}_${pred_len}.log"
+    --learning_rate 1e-1 > "$dir/${model_id_name}_${seq_len}_${pred_len}.log"

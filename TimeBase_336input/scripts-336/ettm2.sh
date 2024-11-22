@@ -87,7 +87,7 @@ python -u run_longExp.py \
     --features M \
     --seq_len "$seq_len" \
     --pred_len "$pred_len" \
-    --period_len 24 \
+    --period_len 4 \
     --enc_in 7 \
     --train_epochs 30 \
     --patience 5 \

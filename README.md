@@ -1,4 +1,4 @@
-To enhance the reliability of our results, we have included all the scripts and logs for running TimeBase, as well as for the other baselines. For SparseTSF, PatchTST, DLinear, FITS, Time-LLM, Fedformer, and TimesNet, we utilized their official code repositories. For Autoformer and Informer, we leveraged the code provided in the official DLinear repository to run these models. The input length for all baselines was set to 720.
+To enhance the reliability of our results, we have included all the scripts and logs for running TimeBase, as well as for the other baselines. For SparseTSF, PatchTST, DLinear, FITS, Time-LLM, Fedformer, and TimesNet, we utilized their official code repositories. For Autoformer and Informer, we leveraged the code provided in the official DLinear repository to run these models. The input length of all models for comparisons was unified in two cases '336 input length' and '720 input length'.
 
 We performed a grid search for TimeBase to find the optimal hyperparameters, specifically for the regularization parameter $\lambda = [0.04, 0.08, 0.12, 0.16, 0.20]$, as well as the learning rate between 0.01 and 0.5. For datasets with a period length shorter than the input length, such as ETTH1, ETTH2, Traffic, and Electricity, we set the period length $P = 24$ and the basis period number $B = 6$. The loss function is MSE.
 
@@ -11,8 +11,12 @@ To run TimeBase, simply follow these two steps:
 
 After setting the input length to 720, the comparison of model prediction results is presented in the figure below.
 
-![alt text](./image/mae.png)
 
 
-![alt text](./image/efficiency.png)
+![img](README.assets/a201ba80484a939aed4773568d8da7c5_720.png)
 
+
+
+After setting the input length to 336, the comparison of model prediction results is presented in the figure below.
+
+![img](README.assets/85047b0da0594eeb09af054577b76636_720.png)

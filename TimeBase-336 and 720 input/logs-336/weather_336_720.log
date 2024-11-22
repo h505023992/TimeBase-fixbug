@@ -1,0 +1,99 @@
+Args in experiment:
+Namespace(is_training=1, model_id='weather_336_720', model='LightTimeBaseTST', data='custom', root_path='./dataset/', data_path='weather.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=336, label_len=48, pred_len=720, period_len=4, basis_num=6, use_period_norm=1, use_orthogonal=1, orthogonal_weight=0.04, fc_dropout=0.05, head_dropout=0.0, patch_len=16, stride=8, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=7, individual=1, embed_type=0, enc_in=21, dec_in=7, c_out=7, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=1, distil=True, dropout=0.05, embed='learned', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=30, batch_size=512, patience=5, learning_rate=0.05, des='test', loss='mse', lradj='type3', pct_start=0.3, use_amp=False, use_gpu=True, gpu=4, use_multi_gpu=0, devices='0,1', test_flop=False)
+Use GPU: cuda:4
+37170
+>>>>>>>start training : weather_336_720_LightTimeBaseTST_custom_ftM_sl336_pl720_test_0_seed2023>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 35832
+val 4551
+test 9820
+Epoch: 1 cost time: 20.7779438495636
+Epoch: 1, Steps: 70 | Train Loss: 0.8220632 Vali Loss: 0.7978456 Test Loss: 0.3868816
+Validation loss decreased (inf --> 0.797846).  Saving model ...
+Updating learning rate to 0.05
+Epoch: 2 cost time: 18.925006866455078
+Epoch: 2, Steps: 70 | Train Loss: 0.6698397 Vali Loss: 0.6740422 Test Loss: 0.3416024
+Validation loss decreased (0.797846 --> 0.674042).  Saving model ...
+Updating learning rate to 0.05
+Epoch: 3 cost time: 17.762048721313477
+Epoch: 3, Steps: 70 | Train Loss: 0.6234863 Vali Loss: 0.6587711 Test Loss: 0.3321112
+Validation loss decreased (0.674042 --> 0.658771).  Saving model ...
+Updating learning rate to 0.05
+Epoch: 4 cost time: 19.36148977279663
+Epoch: 4, Steps: 70 | Train Loss: 0.6191519 Vali Loss: 0.6591609 Test Loss: 0.3341487
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.04000000000000001
+Epoch: 5 cost time: 19.900747060775757
+Epoch: 5, Steps: 70 | Train Loss: 0.6146054 Vali Loss: 0.6601932 Test Loss: 0.3350975
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.03200000000000001
+Epoch: 6 cost time: 17.994386196136475
+Epoch: 6, Steps: 70 | Train Loss: 0.6118650 Vali Loss: 0.6582634 Test Loss: 0.3309138
+Validation loss decreased (0.658771 --> 0.658263).  Saving model ...
+Updating learning rate to 0.025600000000000008
+Epoch: 7 cost time: 19.981801986694336
+Epoch: 7, Steps: 70 | Train Loss: 0.6093174 Vali Loss: 0.6559952 Test Loss: 0.3335990
+Validation loss decreased (0.658263 --> 0.655995).  Saving model ...
+Updating learning rate to 0.020480000000000005
+Epoch: 8 cost time: 19.910237550735474
+Epoch: 8, Steps: 70 | Train Loss: 0.6079024 Vali Loss: 0.6567566 Test Loss: 0.3302819
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.016384000000000006
+Epoch: 9 cost time: 17.821771144866943
+Epoch: 9, Steps: 70 | Train Loss: 0.6066184 Vali Loss: 0.6568215 Test Loss: 0.3299426
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.013107200000000006
+Epoch: 10 cost time: 19.07872176170349
+Epoch: 10, Steps: 70 | Train Loss: 0.6058688 Vali Loss: 0.6563605 Test Loss: 0.3308993
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.010485760000000004
+Epoch: 11 cost time: 18.05535340309143
+Epoch: 11, Steps: 70 | Train Loss: 0.6053436 Vali Loss: 0.6527444 Test Loss: 0.3298765
+Validation loss decreased (0.655995 --> 0.652744).  Saving model ...
+Updating learning rate to 0.008388608000000004
+Epoch: 12 cost time: 16.494297981262207
+Epoch: 12, Steps: 70 | Train Loss: 0.6042339 Vali Loss: 0.6531188 Test Loss: 0.3299887
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.006710886400000004
+Epoch: 13 cost time: 17.79251980781555
+Epoch: 13, Steps: 70 | Train Loss: 0.6034363 Vali Loss: 0.6506910 Test Loss: 0.3291220
+Validation loss decreased (0.652744 --> 0.650691).  Saving model ...
+Updating learning rate to 0.005368709120000003
+Epoch: 14 cost time: 19.829070568084717
+Epoch: 14, Steps: 70 | Train Loss: 0.6030226 Vali Loss: 0.6481439 Test Loss: 0.3273058
+Validation loss decreased (0.650691 --> 0.648144).  Saving model ...
+Updating learning rate to 0.0042949672960000025
+Epoch: 15 cost time: 18.431870698928833
+Epoch: 15, Steps: 70 | Train Loss: 0.6023149 Vali Loss: 0.6501406 Test Loss: 0.3283372
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.0034359738368000023
+Epoch: 16 cost time: 20.160282373428345
+Epoch: 16, Steps: 70 | Train Loss: 0.6022473 Vali Loss: 0.6491099 Test Loss: 0.3276953
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.002748779069440002
+Epoch: 17 cost time: 18.500027179718018
+Epoch: 17, Steps: 70 | Train Loss: 0.6018766 Vali Loss: 0.6476101 Test Loss: 0.3272092
+Validation loss decreased (0.648144 --> 0.647610).  Saving model ...
+Updating learning rate to 0.002199023255552002
+Epoch: 18 cost time: 19.242582321166992
+Epoch: 18, Steps: 70 | Train Loss: 0.6014723 Vali Loss: 0.6484913 Test Loss: 0.3271455
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.0017592186044416017
+Epoch: 19 cost time: 18.204771995544434
+Epoch: 19, Steps: 70 | Train Loss: 0.6013216 Vali Loss: 0.6487005 Test Loss: 0.3279417
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.0014073748835532812
+Epoch: 20 cost time: 18.884422540664673
+Epoch: 20, Steps: 70 | Train Loss: 0.6012169 Vali Loss: 0.6483412 Test Loss: 0.3278050
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.0011258999068426252
+Epoch: 21 cost time: 20.661184072494507
+Epoch: 21, Steps: 70 | Train Loss: 0.6010360 Vali Loss: 0.6488395 Test Loss: 0.3279216
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 0.0009007199254741002
+Epoch: 22 cost time: 19.033509254455566
+Epoch: 22, Steps: 70 | Train Loss: 0.6009615 Vali Loss: 0.6486328 Test Loss: 0.3267925
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : weather_336_720_LightTimeBaseTST_custom_ftM_sl336_pl720_test_0_seed2023<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 9820
+mse:0.31993433833122253, mae:0.33650442957878113, rse:0.744324803352356

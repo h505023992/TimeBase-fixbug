@@ -1,4 +1,4 @@
-Welcome to the official repository for **TimeBase: The Power of Minimalism in Efficient Long-Term Time Series Forecasting**. To ensure the reliability of our results, all the necessary scripts to run TimeBase are included.
+Welcome to the official repository for **TimeBase: The Power of Minimalism in Efficient Long-Term Time Series Forecasting**.  TimeBase **aims to demonstrate that even the most minimalistic models can exhibit strong predictive power, providing a design foundation for more effective time series models. **
 
 ![img](README.assets/812d60f4fe8bab0fd1d4e254876c113f_720.png)
 
@@ -22,12 +22,7 @@ Please follow the data download and preprocessing instructions provided in [Larg
 
 We conducted a grid search to optimize the hyperparameters for TimeBase, particularly for the regularization parameter $\lambda = [0.04, 0.08, 0.12, 0.16, 0.20]$ and the learning rate, which ranges from 0.01 to 0.5. For datasets with a period length shorter than the input length (e.g., ETTh1, ETTh2, Traffic, and Electricity), we set the segment period length $P = 24$ and the number of basis vectors $R = 6$. The loss function used is MSE.  Additionally, we have fixed a bug related to the `test_loader`, where `drop_last=True` was incorrectly applied during testing on the test set. We now ensure that `drop_last=False` is used.
 
-## Running Plug-and-play Reducer
 
-```bash
-cd plug-ang-play_for_patchtst
-sh ./run_all.sh
-```
 ## Running TimeBase
 
 To run TimeBase, simply execute the following command:
@@ -35,7 +30,12 @@ To run TimeBase, simply execute the following command:
 ```bash
 sh ./scripts/$data_name.sh
 ```
+##  Plug-and-play in PatchTST
 
+```bash
+cd plug-ang-play_for_patchtst
+sh ./run_all.sh
+```
 ## Results
 
 TimeBase achieves remarkable efficiency, reducing the MACs by 120x, parameter count by 2600x, and inference time by 3x compared to the DLinear, and 15.42x MACs, 342.5x params than the lightest model. Despite these reductions, TimeBase delivers state-of-the-art forecasting performance, ranking in the Top 2 in 158 out of 168 prediction settings.

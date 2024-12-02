@@ -1,4 +1,4 @@
-Welcome to the official repository for **TimeBase: The Power of Minimalism in Efficient Long-Term Time Series Forecasting**.  TimeBase **aims to demonstrate that even the most minimalistic models can exhibit strong predictive power, providing a design foundation for more effective time series models. **
+Welcome to the official repository for **TimeBase: The Power of Minimalism in Efficient Long-Term Time Series Forecasting**.  TimeBase **aims to demonstrate that even the most minimalistic models can exhibit strong predictive power, providing a design foundation for more effective time series models.**
 
 ![img](README.assets/812d60f4fe8bab0fd1d4e254876c113f_720.png)
 
